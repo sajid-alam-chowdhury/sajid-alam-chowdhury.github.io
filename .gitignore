@@ -1,0 +1,14 @@
+# Local/editor files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# Temporary audit and log output
+audit-screenshots/
+*.log
+
+# Local caches
+__pycache__/
+.pytest_cache/
+
