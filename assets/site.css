@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600;700&family=Playfair+Display:ital,wght@1,800&family=Space+Grotesk:wght@500;600;700&display=swap");
 
 :root {
   color-scheme: light;
@@ -203,7 +203,7 @@ svg {
     inset 0 -1px 0 rgba(0, 0, 0, 0.36),
     0 14px 30px color-mix(in srgb, var(--teal) 23%, transparent);
   font-size: 0;
-  font-family: "Cormorant Garamond", Georgia, serif;
+  font-family: "Playfair Display", Georgia, serif;
   font-weight: 800;
   letter-spacing: 0;
 }
@@ -219,13 +219,13 @@ svg {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  font-family: "Cormorant Garamond", Georgia, serif;
-  font-size: 1.42rem;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 1.34rem;
   font-style: italic;
-  font-weight: 700;
-  letter-spacing: -0.075em;
+  font-weight: 800;
+  letter-spacing: -0.085em;
   line-height: 1;
-  transform: translateX(-0.5px);
+  transform: translate(-0.7px, -0.4px);
   text-shadow:
     0 1px 0 rgba(0, 0, 0, 0.5),
     0 0 10px rgba(255, 255, 255, 0.24);
@@ -240,9 +240,11 @@ svg {
 }
 
 [data-theme="dark"] .brand-logo::before {
-  background: none;
-  color: #ffffff;
-  -webkit-text-fill-color: #ffffff;
+  background: linear-gradient(118deg, #ffffff 0%, #ffffff 34%, #8ff5ee 58%, #f1c668 82%, #ffffff 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
   text-shadow:
     0 0 12px color-mix(in srgb, var(--cyan) 72%, transparent),
     0 0 1px #ffffff,
