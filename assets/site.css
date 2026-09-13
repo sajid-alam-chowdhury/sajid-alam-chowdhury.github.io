@@ -2566,7 +2566,6 @@ pre {
 
   .research-grid,
   .affiliation-grid,
-  .code-grid,
   .achievement-grid,
   .beyond-grid,
   .grid-2,
@@ -2609,6 +2608,42 @@ pre {
   .search-box,
   .search-box input {
     width: 100%;
+  }
+
+  .code-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.68rem;
+  }
+
+  .code-card {
+    min-height: 145px;
+    padding: 0.82rem;
+    gap: 0.42rem;
+    align-content: center;
+  }
+
+  .judge-logo {
+    width: 44px;
+    height: 44px;
+  }
+
+  .judge-logo img {
+    width: 29px;
+    height: 29px;
+  }
+
+  .judge-name {
+    font-size: 0.78rem;
+  }
+
+  .code-card strong {
+    font-size: 1.32rem;
+  }
+
+  .code-card small {
+    font-size: 0.68rem;
+    line-height: 1.3;
+    overflow-wrap: anywhere;
   }
 }
 
@@ -2699,6 +2734,38 @@ pre {
   .button-row .button,
   .button-row button {
     width: 100%;
+  }
+
+  .code-grid {
+    gap: 0.58rem;
+  }
+
+  .code-card {
+    min-height: 132px;
+    padding: 0.72rem;
+  }
+
+  .judge-logo {
+    width: 38px;
+    height: 38px;
+  }
+
+  .judge-logo img {
+    width: 25px;
+    height: 25px;
+  }
+
+  .code-card-head > svg {
+    width: 0.86rem;
+    height: 0.86rem;
+  }
+
+  .code-card strong {
+    font-size: 1.2rem;
+  }
+
+  .code-card small {
+    font-size: 0.62rem;
   }
 }
 
