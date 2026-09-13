@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sajid-alam-chowdhury.github.io/sitemap.xml

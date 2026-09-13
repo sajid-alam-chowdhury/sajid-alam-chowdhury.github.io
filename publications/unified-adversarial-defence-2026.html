@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>document.documentElement.dataset.theme = localStorage.getItem("sajid-site-theme-v2") || "dark";</script>
+  <title>A Unified Adversarial Defence Framework · Md. Sajid Alam Chowdhury</title>
+  <meta name="description" content="Paper page for A Unified Adversarial Defence Framework by Md. Sajid Alam Chowdhury, Md. Khairul Islam, and Kaushik Deb.">
+  <link rel="stylesheet" href="../assets/site.css?v=20260913-polish44">
+  <script src="../assets/lucide.min.js?v=20260913-polish44" defer></script>
+  <script src="../assets/site.js?v=20260913-polish44" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="site-shell nav">
+      <a class="brand" href="../index.html"><span class="brand-logo" aria-hidden="true"></span><span class="brand-name">Md. Sajid Alam Chowdhury</span></a>
+      <button class="icon-button menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" data-menu-toggle><i data-lucide="menu"></i></button>
+      <nav class="nav-links" aria-label="Primary navigation" data-nav-links>
+        <a href="../index.html#research">Research</a>
+        <a href="../publications.html" aria-current="page">Publications</a>
+        <a href="../index.html#education">Education</a>
+        <a href="../index.html#experience">Experience</a>
+        <a href="../index.html#coding">Coding</a>
+        <a href="../index.html#achievements">Achievements</a>
+        <a class="nav-cta" href="../index.html#contact"><i data-lucide="send"></i> Contact</a>
+        <button class="icon-button" type="button" aria-label="Toggle color theme" data-theme-toggle><i data-lucide="moon-star"></i></button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero paper-hero">
+      <div class="site-shell">
+        <p class="kicker">IET Image Processing · 2026</p>
+        <h1>A Unified Adversarial Defence Framework: Diffusion-Driven Purification with Adaptive Timestep Selection and Detection via Reconstruction Consistency Features</h1>
+      </div>
+    </section>
+
+    <section class="section soft">
+      <div class="site-shell paper-page">
+        <article class="paper-main reveal">
+          <h2>Paper Details</h2>
+          <p><strong>Authors:</strong> <strong>Md. Sajid Alam Chowdhury</strong>, Md. Khairul Islam, Kaushik Deb.</p>
+          <p><strong>Venue:</strong> IET Image Processing, Volume 20, Issue 1, e70432, 2026.</p>
+          <p><strong>Status:</strong> Published · Open Access · DOI: 10.1049/ipr2.70432.</p>
+
+          <h2>Abstract</h2>
+          <p class="abstract">Although deep learning models have seen rapid advancements and widespread adoption in recent years, they still remain inherently susceptible to imperceptible perturbations intentionally crafted to mislead their predictions, commonly known as adversarial attacks. To ensure the security and reliability of these models against such adversaries, developing effective adversarial defence mechanisms has become paramount. While many existing defences primarily focus on either detection or purification, recent attention has shifted toward combining these two objectives within a single defence pipeline. Nevertheless, adversarial defences still often face limitations such as attack-specific behaviour, model dependence, visual degradation after purification or limited generalization to unseen perturbations. In this work, we present a unified adversarial defence framework that performs both purification and detection of adversarial images. The purification stage employs a denoising diffusion probabilistic model integrated with an adaptive timestep selection mechanism, which dynamically adjusts the denoising steps based on the estimated noise level of the input to enhance both reconstruction quality and robust accuracy. Following purification, a set of nine complementary metrics, termed reconstruction consistency features (RCF), is introduced to quantify inconsistencies between the input and its purified reconstruction. A lightweight ensemble-based detection module is then trained on these RCF feature vectors to proficiently distinguish adversarial samples from normal ones. Experimental evaluations on CIFAR-10, CIFAR-100, and ImageNet datasets against six different attack methods demonstrate that the proposed framework outperforms five state-of-the-art adversarial purification approaches with an average improvement of 1.95% in robust accuracy, along with gains of 1.74 dB in PSNR and 0.012 in SSIM. Furthermore, it surpasses five existing detection methods, achieving an average improvement of over 5% in detection accuracy.</p>
+
+          <h2>BibTeX</h2>
+          <pre id="bibtex">@article{chowdhury2026unified,
+  title = {A Unified Adversarial Defence Framework: Diffusion-Driven Purification with Adaptive Timestep Selection and Detection via Reconstruction Consistency Features},
+  author = {Chowdhury, Md. Sajid Alam and Islam, Md. Khairul and Deb, Kaushik},
+  journal = {IET Image Processing},
+  volume = {20},
+  number = {1},
+  pages = {e70432},
+  year = {2026},
+  doi = {10.1049/ipr2.70432},
+  url = {https://doi.org/10.1049/ipr2.70432}
+}</pre>
+        </article>
+
+        <aside class="paper-side reveal">
+          <a class="button primary" href="https://ietresearch.onlinelibrary.wiley.com/doi/10.1049/ipr2.70432" target="_blank" rel="noreferrer"><i data-lucide="book-open"></i> Official Page</a>
+          <a class="button" href="https://ietresearch.onlinelibrary.wiley.com/doi/pdf/10.1049/ipr2.70432" target="_blank" rel="noreferrer"><i data-lucide="download"></i> PDF</a>
+          <a class="button" href="https://doi.org/10.1049/ipr2.70432" target="_blank" rel="noreferrer"><i data-lucide="link"></i> DOI</a>
+          <button class="button" type="button" data-copy-target="#bibtex"><i data-lucide="copy"></i> Copy BibTeX</button>
+          <a class="button" href="../publications.html"><i data-lucide="arrow-left"></i> All Publications</a>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer"><div class="site-shell"><span><a href="../publications.html">Publications</a></span><span>© 2026 Md. Sajid Alam Chowdhury</span></div></footer>
+</body>
+</html>

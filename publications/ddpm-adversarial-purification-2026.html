@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>document.documentElement.dataset.theme = localStorage.getItem("sajid-site-theme-v2") || "dark";</script>
+  <title>DDPM-Based Adversarial Purification · Md. Sajid Alam Chowdhury</title>
+  <meta name="description" content="Paper page for Towards Developing a DDPM-Based Adversarial Purification Method with Noise-Guided Timestep Selection.">
+  <link rel="stylesheet" href="../assets/site.css?v=20260913-polish44">
+  <script src="../assets/lucide.min.js?v=20260913-polish44" defer></script>
+  <script src="../assets/site.js?v=20260913-polish44" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="site-shell nav">
+      <a class="brand" href="../index.html"><span class="brand-logo" aria-hidden="true"></span><span class="brand-name">Md. Sajid Alam Chowdhury</span></a>
+      <button class="icon-button menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" data-menu-toggle><i data-lucide="menu"></i></button>
+      <nav class="nav-links" aria-label="Primary navigation" data-nav-links>
+        <a href="../index.html#research">Research</a>
+        <a href="../publications.html" aria-current="page">Publications</a>
+        <a href="../index.html#education">Education</a>
+        <a href="../index.html#experience">Experience</a>
+        <a href="../index.html#coding">Coding</a>
+        <a href="../index.html#achievements">Achievements</a>
+        <a class="nav-cta" href="../index.html#contact"><i data-lucide="send"></i> Contact</a>
+        <button class="icon-button" type="button" aria-label="Toggle color theme" data-theme-toggle><i data-lucide="moon-star"></i></button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero paper-hero">
+      <div class="site-shell">
+        <p class="kicker">IEEE QPAIN · 2026</p>
+        <h1>Towards Developing a DDPM-Based Adversarial Purification Method with Noise-Guided Timestep Selection</h1>
+      </div>
+    </section>
+
+    <section class="section soft">
+      <div class="site-shell paper-page">
+        <article class="paper-main reveal">
+          <h2>Paper Details</h2>
+          <p><strong>Authors:</strong> <strong>Md. Sajid Alam Chowdhury</strong>, Md. Khairul Islam, Kaushik Deb.</p>
+          <p><strong>Venue:</strong> 2026 IEEE 2nd International Conference on Quantum Photonics, Artificial Intelligence &amp; Networking (QPAIN).</p>
+          <p><strong>Status:</strong> Published · DOI: 10.1109/QPAIN69676.2026.11545720.</p>
+
+          <h2>Abstract</h2>
+          <p class="abstract">Despite achieving phenomenal success in image classification tasks, deep learning models still remain inherently susceptible to subtle and imperceptible perturbations, known as adversarial attacks. These attacks are deliberately designed to mislead model predictions. In this paper, a model-agnostic adversarial defense method for purifying the adversarial images is introduced, which is based on the generative capabilities of the Denoising Diffusion Probabilistic Model (DDPM). Our proposed method reconstructs clean images from adversarial inputs through a reverse diffusion process that gradually removes noise. Instead of running the full diffusion schedule for every input image, a timestep-selection mechanism is introduced that decides how many denoising steps an image actually needs based on its estimated noise level. This allows the method to remove adversarial perturbations while keeping essential semantic details intact, and also reduces unnecessary computation. Our proposed method has been evaluated against five widely studied attacks: FGSM, PGD, BIM, DeepFool, and CW, across 11 adversarial configurations covering different attack types and perturbation magnitudes. Our experiments on CIFAR-10, CIFAR-100, and ImageNet datasets using EfficientNetB0 as the target classifier show consistent improvements over state-of-the-art methods. The proposed method achieves over a 2.54% gain in standard accuracy, more than a 2.15% increase in robust accuracy, and yields enhanced visual quality with improvements of 1.27 dB in PSNR and 0.0087 in SSIM.</p>
+
+          <h2>BibTeX</h2>
+          <pre id="bibtex">@inproceedings{chowdhury2026ddpm,
+  title = {Towards Developing a DDPM-Based Adversarial Purification Method with Noise-Guided Timestep Selection},
+  author = {Chowdhury, Md. Sajid Alam and Islam, Md. Khairul and Deb, Kaushik},
+  booktitle = {2026 IEEE 2nd International Conference on Quantum Photonics, Artificial Intelligence and Networking (QPAIN)},
+  year = {2026},
+  doi = {10.1109/QPAIN69676.2026.11545720}
+}</pre>
+        </article>
+
+        <aside class="paper-side reveal">
+          <a class="button primary" href="https://ieeexplore.ieee.org/document/11545720" target="_blank" rel="noreferrer"><i data-lucide="book-open"></i> Official Page</a>
+          <a class="button" href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=11545720" target="_blank" rel="noreferrer"><i data-lucide="download"></i> PDF</a>
+          <a class="button" href="https://doi.org/10.1109/QPAIN69676.2026.11545720" target="_blank" rel="noreferrer"><i data-lucide="link"></i> DOI</a>
+          <button class="button" type="button" data-copy-target="#bibtex"><i data-lucide="copy"></i> Copy BibTeX</button>
+          <a class="button" href="../publications.html"><i data-lucide="arrow-left"></i> All Publications</a>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer"><div class="site-shell"><span><a href="../publications.html">Publications</a></span><span>© 2026 Md. Sajid Alam Chowdhury</span></div></footer>
+</body>
+</html>
