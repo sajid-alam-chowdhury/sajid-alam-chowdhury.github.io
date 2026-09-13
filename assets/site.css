@@ -2552,9 +2552,19 @@ pre {
   .news-entry,
   .pub-card,
   .paper-card,
-  .timeline-item,
-  .achievement-list p {
+  .timeline-item {
     grid-template-columns: 1fr;
+  }
+
+  .achievement-list p {
+    grid-template-columns: 62px minmax(0, 1fr);
+    gap: 0.6rem;
+    padding: 0.56rem 0.58rem;
+  }
+
+  .achievement-list time {
+    min-height: 40px;
+    font-size: 0.74rem;
   }
 
   .scholar-metric {
@@ -2766,6 +2776,17 @@ pre {
 
   .code-card small {
     font-size: 0.62rem;
+  }
+
+  .achievement-list p {
+    grid-template-columns: 56px minmax(0, 1fr);
+    gap: 0.52rem;
+    padding: 0.52rem;
+  }
+
+  .achievement-list time {
+    min-height: 38px;
+    font-size: 0.68rem;
   }
 }
 
