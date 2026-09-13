@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600;700&family=Playfair+Display:ital,wght@1,800&family=Space+Grotesk:wght@500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap");
 
 :root {
   color-scheme: light;
@@ -191,19 +191,19 @@ svg {
   display: grid;
   place-items: center;
   flex: 0 0 auto;
-  border: 1px solid color-mix(in srgb, var(--cyan) 34%, var(--line));
+  border: 1px solid color-mix(in srgb, var(--amber) 44%, var(--cyan));
   border-radius: var(--radius);
   background:
-    radial-gradient(circle at 28% 18%, rgba(255, 255, 255, 0.32), transparent 18%),
-    radial-gradient(circle at 78% 82%, color-mix(in srgb, var(--amber) 28%, transparent), transparent 22%),
-    linear-gradient(145deg, #06111a 0%, #152934 36%, color-mix(in srgb, var(--teal) 62%, #0b1720) 68%, #071018 100%);
+    radial-gradient(circle at 28% 18%, rgba(255, 255, 255, 0.28), transparent 18%),
+    radial-gradient(circle at 76% 82%, rgba(241, 198, 104, 0.34), transparent 24%),
+    linear-gradient(145deg, #050b12 0%, #10242d 35%, #0b5f5c 68%, #050b12 100%);
   color: transparent;
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.18),
     inset 0 -1px 0 rgba(0, 0, 0, 0.36),
     0 14px 30px color-mix(in srgb, var(--teal) 23%, transparent);
   font-size: 0;
-  font-family: "Playfair Display", Georgia, serif;
+  font-family: Cinzel, "Trajan Pro", Georgia, serif;
   font-weight: 800;
   letter-spacing: 0;
 }
@@ -215,32 +215,34 @@ svg {
   z-index: 1;
   display: grid;
   place-items: center;
-  background: linear-gradient(118deg, #ffffff 0%, #9ba8b5 17%, #ffffff 36%, #70efe4 56%, #d2a648 76%, #ffffff 100%);
+  background: linear-gradient(128deg, #fff8d6 0%, #f1c668 34%, #ffffff 48%, #7cece5 63%, #d49a24 86%, #fff3bd 100%);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  font-family: "Playfair Display", Georgia, serif;
-  font-size: 1.34rem;
-  font-style: italic;
+  font-family: Cinzel, "Trajan Pro", Georgia, serif;
+  font-size: 1.2rem;
+  font-style: normal;
   font-weight: 800;
-  letter-spacing: -0.085em;
+  letter-spacing: -0.07em;
   line-height: 1;
-  transform: translate(-0.7px, -0.4px);
+  transform: translateY(-0.2px);
+  -webkit-text-stroke: 0.22px rgba(5, 11, 18, 0.68);
   text-shadow:
-    0 1px 0 rgba(0, 0, 0, 0.5),
-    0 0 10px rgba(255, 255, 255, 0.24);
+    0 1px 0 rgba(0, 0, 0, 0.62),
+    0 0 10px rgba(241, 198, 104, 0.28),
+    0 0 14px rgba(101, 223, 212, 0.18);
 }
 
 [data-theme="dark"] .brand-logo {
-  border-color: color-mix(in srgb, var(--amber) 38%, var(--cyan));
+  border-color: color-mix(in srgb, var(--amber) 58%, var(--cyan));
   background:
-    radial-gradient(circle at 24% 18%, rgba(255, 255, 255, 0.34), transparent 18%),
-    radial-gradient(circle at 82% 82%, color-mix(in srgb, var(--amber) 34%, transparent), transparent 24%),
-    linear-gradient(145deg, #09202a 0%, #123845 40%, #0b827c 70%, #061018 100%);
+    radial-gradient(circle at 24% 18%, rgba(255, 255, 255, 0.3), transparent 18%),
+    radial-gradient(circle at 82% 82%, rgba(241, 198, 104, 0.4), transparent 24%),
+    linear-gradient(145deg, #071018 0%, #112c35 40%, #0b716c 70%, #050b12 100%);
 }
 
 [data-theme="dark"] .brand-logo::before {
-  background: linear-gradient(118deg, #ffffff 0%, #ffffff 34%, #8ff5ee 58%, #f1c668 82%, #ffffff 100%);
+  background: linear-gradient(128deg, #fff7d0 0%, #f1c668 36%, #ffffff 50%, #80f1ea 64%, #d99b21 88%, #fff3bd 100%);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
