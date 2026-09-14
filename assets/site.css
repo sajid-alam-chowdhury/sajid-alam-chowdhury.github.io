@@ -2442,7 +2442,7 @@ pre {
     row-gap: 0.5rem;
     align-items: stretch;
     justify-self: stretch;
-    margin: 1.25rem 0 0.15rem;
+    margin: 1.25rem 0;
   }
 
   .portrait-panel {
@@ -2548,6 +2548,7 @@ pre {
   }
 
   .hero-bio {
+    margin-top: 0;
     text-align: left;
     text-align-last: left;
   }
