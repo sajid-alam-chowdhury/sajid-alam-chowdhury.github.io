@@ -2420,7 +2420,8 @@ pre {
     width: min(100%, 500px);
     display: grid;
     grid-template-columns: clamp(84px, 21vw, 100px) minmax(0, 1fr);
-    gap: 0.66rem;
+    column-gap: 0.66rem;
+    row-gap: 0.5rem;
     align-items: stretch;
     justify-self: stretch;
     margin: 0.62rem 0 0.15rem;
@@ -2675,7 +2676,8 @@ pre {
   .hero-visual {
     width: 100%;
     grid-template-columns: 84px minmax(0, 1fr);
-    gap: 0.62rem;
+    column-gap: 0.62rem;
+    row-gap: 0.5rem;
     justify-self: stretch;
   }
 
