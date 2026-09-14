@@ -194,7 +194,7 @@ svg {
   border: 0;
   border-radius: 13px;
   background:
-    radial-gradient(circle at 24% 20%, rgba(255, 255, 255, 0.16), transparent 27%),
+    radial-gradient(circle at 24% 20%, rgba(255, 255, 255, 0.2), transparent 28%),
     radial-gradient(circle at 85% 88%, color-mix(in srgb, var(--amber) 38%, transparent), transparent 24%),
     linear-gradient(135deg, #050a10 0%, #102631 38%, #08736e 72%, #050a10 100%);
   color: #ffffff;
@@ -216,15 +216,15 @@ svg {
   z-index: 1;
   display: block;
   color: #ffffff;
-  font-family: Cinzel, "Space Grotesk", Inter, ui-sans-serif, sans-serif;
-  font-size: 1.18rem;
-  font-weight: 800;
+  font-family: "Space Grotesk", Cinzel, Inter, ui-sans-serif, sans-serif;
+  font-size: 1.08rem;
+  font-weight: 700;
   line-height: 1;
   letter-spacing: 0;
-  -webkit-text-stroke: 0.3px #061018;
+  -webkit-text-stroke: 0.42px #061018;
   text-shadow:
-    0.8px 0.8px 0 color-mix(in srgb, var(--amber) 78%, transparent),
-    -0.8px 0 0 color-mix(in srgb, var(--cyan) 70%, transparent),
+    1px 1px 0 color-mix(in srgb, var(--amber) 74%, transparent),
+    -1px 0 0 color-mix(in srgb, var(--cyan) 72%, transparent),
     0 1px 0 #071018;
 }
 
