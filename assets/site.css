@@ -191,20 +191,20 @@ svg {
   display: grid;
   place-items: center;
   flex: 0 0 auto;
-  border: 1px solid color-mix(in srgb, var(--amber) 44%, var(--cyan));
-  border-radius: var(--radius);
+  border: 1px solid color-mix(in srgb, var(--teal) 58%, var(--line));
+  border-radius: 12px;
   background:
-    radial-gradient(circle at 28% 18%, rgba(255, 255, 255, 0.28), transparent 18%),
-    radial-gradient(circle at 76% 82%, rgba(241, 198, 104, 0.34), transparent 24%),
-    linear-gradient(145deg, #050b12 0%, #10242d 35%, #0b5f5c 68%, #050b12 100%);
-  color: transparent;
+    linear-gradient(135deg, rgba(255, 255, 255, 0.14), transparent 34%),
+    linear-gradient(145deg, #071018 0%, #12313a 48%, #0a615d 100%);
+  color: #ffffff;
   box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.08),
     inset 0 1px 0 rgba(255, 255, 255, 0.18),
     inset 0 -1px 0 rgba(0, 0, 0, 0.36),
-    0 14px 30px color-mix(in srgb, var(--teal) 23%, transparent);
+    0 14px 28px color-mix(in srgb, var(--teal) 20%, transparent);
   font-size: 0;
-  font-family: Cinzel, "Trajan Pro", Georgia, serif;
-  font-weight: 800;
+  font-family: "Space Grotesk", Inter, ui-sans-serif, sans-serif;
+  font-weight: 700;
   letter-spacing: 0;
 }
 
@@ -215,57 +215,40 @@ svg {
   z-index: 1;
   display: grid;
   place-items: center;
-  background: linear-gradient(128deg, #fff8d6 0%, #f1c668 34%, #ffffff 48%, #7cece5 63%, #d49a24 86%, #fff3bd 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  font-family: Cinzel, "Trajan Pro", Georgia, serif;
-  font-size: 1.2rem;
-  font-style: normal;
-  font-weight: 800;
+  color: #ffffff;
+  font-family: "Space Grotesk", Inter, ui-sans-serif, sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
   line-height: 1;
-  letter-spacing: -0.07em;
-  transform: translateY(-0.2px);
-  -webkit-text-stroke: 0.22px rgba(5, 11, 18, 0.68);
+  letter-spacing: 0.03em;
   text-shadow:
-    0 1px 0 rgba(0, 0, 0, 0.62),
-    0 0 10px rgba(241, 198, 104, 0.28),
-    0 0 14px rgba(101, 223, 212, 0.18);
+    0 1px 1px rgba(0, 0, 0, 0.44),
+    0 0 8px rgba(255, 255, 255, 0.12);
 }
 
 [data-theme="dark"] .brand-logo {
-  border-color: color-mix(in srgb, var(--amber) 58%, var(--cyan));
+  border-color: color-mix(in srgb, var(--teal) 62%, var(--line));
   background:
-    radial-gradient(circle at 24% 18%, rgba(255, 255, 255, 0.3), transparent 18%),
-    radial-gradient(circle at 82% 82%, rgba(241, 198, 104, 0.4), transparent 24%),
-    linear-gradient(145deg, #071018 0%, #112c35 40%, #0b716c 70%, #050b12 100%);
-}
-
-[data-theme="dark"] .brand-logo::before {
-  background: linear-gradient(128deg, #fff7d0 0%, #f1c668 36%, #ffffff 50%, #80f1ea 64%, #d99b21 88%, #fff3bd 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  -webkit-text-fill-color: transparent;
-  text-shadow:
-    0 0 12px color-mix(in srgb, var(--cyan) 72%, transparent),
-    0 0 1px #ffffff,
-    0 1px 0 rgba(0, 0, 0, 0.55);
+    linear-gradient(135deg, rgba(255, 255, 255, 0.16), transparent 34%),
+    linear-gradient(145deg, #071018 0%, #12313a 48%, #0a615d 100%);
 }
 
 .brand-logo::after {
   content: "";
   position: absolute;
-  inset: -28% auto auto -34%;
-  width: 42px;
-  height: 72px;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-  transform: rotate(26deg);
-  transition: transform 260ms ease;
+  z-index: 2;
+  right: 8px;
+  bottom: 8px;
+  width: 9px;
+  height: 2px;
+  border-radius: 999px;
+  background: var(--amber);
+  transition: width 180ms ease, background 180ms ease;
 }
 
 .brand:hover .brand-logo::after {
-  transform: translateX(54px) rotate(26deg);
+  width: 14px;
+  background: color-mix(in srgb, var(--amber) 72%, var(--cyan));
 }
 
 .brand-name {
@@ -984,8 +967,8 @@ h3 {
 .scholar-stat::after {
   content: "";
   position: absolute;
-  top: 0.72rem;
-  right: 0.7rem;
+  top: 0.5rem;
+  right: 0.5rem;
   width: 8px;
   height: 8px;
   border-radius: 50%;
@@ -2447,7 +2430,7 @@ pre {
 
   .hero-copy > .hero-line {
     order: 3;
-    margin-top: 0.25rem;
+    margin-top: 0.45rem;
   }
 
   .hero-visual {
@@ -2532,12 +2515,12 @@ pre {
   }
 
   .hero-visual .scholar-stat-grid {
-    gap: 0.46rem;
+    gap: 0.56rem;
   }
 
   .hero-visual .scholar-stat {
-    min-height: 48px;
-    padding: 0.48rem;
+    min-height: 46px;
+    padding: 0.44rem 0.36rem;
   }
 
   .hero-visual .scholar-stat strong {
@@ -2754,12 +2737,19 @@ pre {
   }
 
   .hero-visual .scholar-stat-grid {
-    gap: 0.32rem;
+    gap: 0.5rem;
   }
 
   .hero-visual .scholar-stat {
     min-height: 38px;
-    padding: 0.32rem 0.34rem;
+    padding: 0.32rem 0.26rem;
+  }
+
+  .hero-visual .scholar-stat::after {
+    top: 0.34rem;
+    right: 0.34rem;
+    width: 6px;
+    height: 6px;
   }
 
   .hero-visual .scholar-stat strong {
