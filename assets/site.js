@@ -8,8 +8,27 @@
     if (window.lucide) window.lucide.createIcons();
   }
 
-  window.addEventListener("load", refreshIcons);
-  window.setTimeout(refreshIcons, 1200);
+  const themeButtons = Array.from(document.querySelectorAll("[data-theme-toggle]"));
+
+  function syncThemeToggleIcons() {
+    const isDark = root.dataset.theme === "dark";
+    const icon = isDark ? "sun" : "moon-star";
+    const label = isDark ? "Switch to light theme" : "Switch to dark theme";
+
+    themeButtons.forEach((button) => {
+      const currentIcon = button.querySelector("[data-lucide]");
+      if (!currentIcon || currentIcon.getAttribute("data-lucide") !== icon) {
+        button.innerHTML = `<i data-lucide="${icon}"></i>`;
+      }
+      button.setAttribute("aria-label", label);
+      button.setAttribute("title", label);
+    });
+
+    refreshIcons();
+  }
+
+  window.addEventListener("load", syncThemeToggleIcons);
+  window.setTimeout(syncThemeToggleIcons, 1200);
 
   function updateScrollProgress() {
     const scrollable = document.documentElement.scrollHeight - window.innerHeight;
@@ -20,12 +39,14 @@
   updateScrollProgress();
   window.addEventListener("scroll", updateScrollProgress, { passive: true });
 
-  document.querySelectorAll("[data-theme-toggle]").forEach((button) => {
+  syncThemeToggleIcons();
+
+  themeButtons.forEach((button) => {
     button.addEventListener("click", () => {
       const next = root.dataset.theme === "dark" ? "light" : "dark";
       root.dataset.theme = next;
       localStorage.setItem(themeKey, next);
-      refreshIcons();
+      syncThemeToggleIcons();
     });
   });
 
