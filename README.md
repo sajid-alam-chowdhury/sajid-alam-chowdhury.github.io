@@ -1,6 +1,6 @@
-# Md. Sajid Alam Chowdhury
+# Md. Sajid Alam Chowdhury - Personal Website
 
-Personal academic website for Md. Sajid Alam Chowdhury, a Computer Science PhD student at Wayne State University working on trustworthy multimodal AI, privacy-aware vision-language reasoning, adversarial robustness, and long-horizon video understanding.
+Personal website for Md. Sajid Alam Chowdhury, featuring publications, projects, research, updates, CV, and other academic and professional information.
 
 Live site: https://sajid-alam-chowdhury.github.io/
 
