@@ -1,14 +1,16 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
   <defs>
-    <linearGradient id="bg" x1="8" y1="6" x2="56" y2="58" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#0b171e"/>
-      <stop offset=".58" stop-color="#102b32"/>
-      <stop offset="1" stop-color="#12433f"/>
+    <linearGradient id="bg" x1="10" y1="8" x2="54" y2="56" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#071018"/>
+      <stop offset=".48" stop-color="#12313a"/>
+      <stop offset="1" stop-color="#0a615d"/>
+    </linearGradient>
+    <linearGradient id="shine" x1="12" y1="10" x2="42" y2="34" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ffffff" stop-opacity=".18"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
     </linearGradient>
   </defs>
-  <rect x="1.5" y="1.5" width="61" height="61" rx="11" fill="url(#bg)"/>
-  <rect x="3" y="3" width="58" height="58" rx="9.5" fill="none" stroke="#4ba7a2" stroke-width="1.35"/>
-  <path d="M32.21 44.5Q29.5 44.5 27.41 43.53Q25.31 42.57 24.12 40.71Q22.93 38.85 22.93 36.14V35.29H26.61V36.14Q26.61 38.71 28.14 39.98Q29.68 41.24 32.21 41.24Q34.77 41.24 36.09 40.15Q37.4 39.06 37.4 37.36Q37.4 36.21 36.78 35.5Q36.17 34.8 35.03 34.35Q33.89 33.91 32.3 33.54L31.02 33.24Q28.73 32.7 27.04 31.88Q25.35 31.07 24.42 29.73Q23.5 28.4 23.5 26.29Q23.5 24.18 24.53 22.66Q25.57 21.13 27.43 20.32Q29.29 19.5 31.8 19.5Q34.3 19.5 36.27 20.36Q38.25 21.22 39.38 22.9Q40.52 24.59 40.52 27.13V28.36H36.85V27.13Q36.85 25.57 36.22 24.62Q35.58 23.66 34.44 23.21Q33.3 22.76 31.8 22.76Q29.58 22.76 28.37 23.67Q27.17 24.57 27.17 26.2Q27.17 27.29 27.7 27.99Q28.24 28.69 29.27 29.14Q30.3 29.59 31.81 29.93L33.09 30.23Q35.43 30.75 37.22 31.56Q39.01 32.38 40.04 33.75Q41.07 35.11 41.07 37.27Q41.07 39.44 39.98 41.06Q38.89 42.68 36.9 43.59Q34.91 44.5 32.21 44.5Z" fill="#f7fafb"/>
-  <path d="m47 11 7-1.4" stroke="#d8ad55" stroke-width="1.5" stroke-linecap="round"/>
-  <path d="m10 54.4 7-1.4" stroke="#d8ad55" stroke-width="1.5" stroke-linecap="round"/>
+  <rect x="1.5" y="1.5" width="61" height="61" rx="12" fill="url(#bg)"/>
+  <rect x="3" y="3" width="58" height="58" rx="10.5" fill="none" stroke="#65dfd4" stroke-width="2"/>
+  <text x="32" y="44" text-anchor="middle" font-family="'Space Grotesk', Inter, Arial, sans-serif" font-size="38" font-weight="800" fill="#ffffff">S</text>
 </svg>
