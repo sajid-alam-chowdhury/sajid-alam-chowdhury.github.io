@@ -1,14 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
   <defs>
-    <linearGradient id="bg" x1="10" y1="8" x2="54" y2="56" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#071018"/>
-      <stop offset=".48" stop-color="#12313a"/>
-      <stop offset="1" stop-color="#0a615d"/>
+    <linearGradient id="bg" x1="8" y1="7" x2="56" y2="57" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#08141c"/>
+      <stop offset=".55" stop-color="#0f2b32"/>
+      <stop offset="1" stop-color="#0d4844"/>
     </linearGradient>
   </defs>
-  <rect x="1.5" y="1.5" width="61" height="61" rx="12" fill="url(#bg)"/>
-  <rect x="3" y="3" width="58" height="58" rx="10.5" fill="none" stroke="#65dfd4" stroke-width="2"/>
-  <path d="M22.1 44.69V42.26H35.09Q37.19 42.26 37.19 40.15V36.88Q37.19 35.07 35.59 34.73L26.94 33.01Q22.1 32.04 22.1 26.54V24.22Q22.1 17.5 28.87 17.5H38.75L41.06 19.31V21.74H28.95Q26.81 21.74 26.81 23.85V26.66Q26.81 28.51 28.45 28.85L37.11 30.53Q41.9 31.54 41.9 37V39.78Q41.9 46.5 35.17 46.5H24.46Z" fill="#ffffff"/>
-  <path d="M10 11h10" stroke="#f1c668" stroke-width="2" stroke-linecap="round"/>
-  <path d="M44 53h10" stroke="#f1c668" stroke-width="2" stroke-linecap="round"/>
+  <rect x="1.5" y="1.5" width="61" height="61" rx="11" fill="url(#bg)"/>
+  <rect x="3" y="3" width="58" height="58" rx="9.5" fill="none" stroke="#53beb6" stroke-width="1.4"/>
+  <path d="M23.38 45.5Q22.06 45.5 20.94 44.84Q19.81 44.19 19.16 43.08Q18.5 41.98 18.5 40.62V39.05H22.55V40.51Q22.55 40.89 22.83 41.17Q23.11 41.45 23.49 41.45H40.51Q40.89 41.45 41.15 41.17Q41.41 40.89 41.41 40.51V34.96Q41.41 34.55 41.15 34.31Q40.89 34.06 40.51 34.06H23.38Q22.06 34.06 20.94 33.39Q19.81 32.71 19.16 31.61Q18.5 30.5 18.5 29.15V23.38Q18.5 22.03 19.16 20.92Q19.81 19.81 20.94 19.16Q22.06 18.5 23.38 18.5H40.62Q41.94 18.5 43.06 19.16Q44.19 19.81 44.84 20.92Q45.5 22.03 45.5 23.38V24.95H41.41V23.49Q41.41 23.11 41.15 22.83Q40.89 22.55 40.51 22.55H23.49Q23.11 22.55 22.83 22.83Q22.55 23.11 22.55 23.49V29.04Q22.55 29.45 22.83 29.69Q23.11 29.94 23.49 29.94H40.62Q41.94 29.94 43.06 30.61Q44.19 31.29 44.84 32.39Q45.5 33.5 45.5 34.85V40.62Q45.5 41.98 44.84 43.08Q44.19 44.19 43.06 44.84Q41.94 45.5 40.62 45.5Z" fill="#f7fafa"/>
+  <path d="M10 11h8" stroke="#d8ad55" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M46 53h8" stroke="#d8ad55" stroke-width="1.5" stroke-linecap="round"/>
 </svg>
