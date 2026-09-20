@@ -972,11 +972,26 @@ h3 {
 .scholar-label {
   display: flex;
   align-items: center;
-  gap: 0.6rem;
+  justify-content: center;
+  gap: 0.52rem;
   color: var(--ink-strong);
   font-weight: 800;
-  justify-content: space-between;
   padding: 0;
+}
+
+.scholar-label::before,
+.scholar-label::after {
+  content: "";
+  width: clamp(22px, 12%, 42px);
+  height: 3px;
+  flex: 0 1 42px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--amber), color-mix(in srgb, var(--amber) 68%, var(--teal)));
+  box-shadow: 0 0 12px color-mix(in srgb, var(--amber) 24%, transparent);
+}
+
+.scholar-label::after {
+  background: linear-gradient(90deg, color-mix(in srgb, var(--amber) 68%, var(--teal)), var(--amber));
 }
 
 .scholar-stat-grid {
