@@ -24,6 +24,9 @@
   --shadow-soft: 0 14px 34px rgba(7, 15, 28, 0.08);
   --max: 1180px;
   --radius: 8px;
+  --ease-interactive: cubic-bezier(0.25, 0.1, 0.25, 1);
+  --motion-control: 340ms;
+  --motion-card: 440ms;
 }
 
 [data-theme="dark"] {
@@ -203,7 +206,7 @@ svg {
   font-family: "Space Grotesk", Inter, ui-sans-serif, sans-serif;
   font-weight: 700;
   letter-spacing: 0;
-  transition: transform 240ms ease, filter 240ms ease, box-shadow 240ms ease;
+  transition: transform var(--motion-control) var(--ease-interactive), filter var(--motion-control) ease, box-shadow var(--motion-control) var(--ease-interactive);
 }
 
 .brand-logo::before {
@@ -219,7 +222,7 @@ svg {
 }
 
 .brand:hover .brand-logo {
-  transform: translateY(-1px) scale(1.045);
+  transform: translateY(-1px) scale(1.025);
   filter: saturate(1.1) brightness(1.09);
   box-shadow:
     inset 0 0 0 1px rgba(255, 255, 255, 0.1),
@@ -228,7 +231,7 @@ svg {
 }
 
 .brand:active .brand-logo {
-  transform: translateY(0) scale(0.985);
+  transform: translateY(0) scale(0.99);
 }
 
 .brand-name {
@@ -264,7 +267,7 @@ svg {
   cursor: pointer;
   font-size: 0.88rem;
   font-weight: 750;
-  transition: transform 160ms ease, border-color 160ms ease, background 160ms ease, box-shadow 160ms ease, color 160ms ease;
+  transition: transform var(--motion-control) var(--ease-interactive), border-color var(--motion-control) ease, background var(--motion-control) ease, box-shadow var(--motion-control) var(--ease-interactive), color var(--motion-control) ease;
 }
 
 .nav-links a,
@@ -296,7 +299,7 @@ svg {
   background-size: 220% 100%;
   transform: scaleX(0);
   transform-origin: left;
-  transition: transform 180ms ease;
+  transition: transform var(--motion-control) var(--ease-interactive);
 }
 
 .nav-links a:not(.nav-cta):hover::after,
@@ -320,7 +323,7 @@ svg {
 .button:hover,
 .mini-link:hover,
 .filter-button:hover {
-  transform: translateY(-2px) scale(1.045);
+  transform: translateY(-1px) scale(1.012);
   border-color: color-mix(in srgb, var(--teal) 30%, var(--line));
   background: color-mix(in srgb, var(--teal-soft) 78%, transparent);
   color: var(--ink-strong);
@@ -360,11 +363,11 @@ svg {
   background: color-mix(in srgb, var(--surface) 84%, transparent);
   color: var(--muted);
   box-shadow: 0 7px 18px rgba(7, 15, 28, 0.055);
-  transition: transform 220ms ease, border-color 220ms ease, background 220ms ease, box-shadow 220ms ease, color 220ms ease;
+  transition: transform var(--motion-control) var(--ease-interactive), border-color var(--motion-control) ease, background var(--motion-control) ease, box-shadow var(--motion-control) var(--ease-interactive), color var(--motion-control) ease;
 }
 
 .nav-cta svg {
-  transition: color 220ms ease, transform 220ms ease;
+  transition: color var(--motion-control) ease, transform var(--motion-control) var(--ease-interactive);
 }
 
 .nav-links .nav-cta.active,
@@ -382,7 +385,7 @@ svg {
 }
 
 .nav-cta:not(.active):not([aria-current="page"]):hover {
-  transform: translateY(-2px) scale(1.025);
+  transform: translateY(-1px) scale(1.01);
   border-color: color-mix(in srgb, var(--amber) 28%, var(--teal));
   background: linear-gradient(135deg, color-mix(in srgb, var(--surface) 96%, transparent), color-mix(in srgb, var(--teal-soft) 52%, var(--surface)));
   color: var(--ink-strong);
@@ -396,7 +399,7 @@ svg {
 
 .nav-links .nav-cta.active:hover,
 .nav-links .nav-cta[aria-current="page"]:hover {
-  transform: translateY(-1px) scale(1.015);
+  transform: translateY(-1px) scale(1.006);
   color: #ffffff;
   box-shadow: 0 12px 27px color-mix(in srgb, var(--teal) 24%, transparent);
 }
@@ -420,11 +423,11 @@ svg {
   background: color-mix(in srgb, var(--surface) 84%, transparent);
   color: var(--muted);
   box-shadow: 0 7px 18px rgba(7, 15, 28, 0.055);
-  transition: transform 220ms ease, border-color 220ms ease, background 220ms ease, box-shadow 220ms ease, color 220ms ease;
+  transition: transform var(--motion-control) var(--ease-interactive), border-color var(--motion-control) ease, background var(--motion-control) ease, box-shadow var(--motion-control) var(--ease-interactive), color var(--motion-control) ease;
 }
 
 .nav-links [data-theme-toggle]:hover {
-  transform: translateY(-2px) scale(1.045);
+  transform: translateY(-1px) scale(1.015);
   border-color: color-mix(in srgb, var(--amber) 38%, var(--teal));
   border-radius: 50%;
   background: linear-gradient(135deg, color-mix(in srgb, var(--surface) 96%, transparent), color-mix(in srgb, var(--teal-soft) 52%, var(--surface)));
@@ -433,7 +436,7 @@ svg {
 }
 
 .nav-links [data-theme-toggle]:active {
-  transform: translateY(0) scale(0.96);
+  transform: translateY(0) scale(0.975);
 }
 
 .nav-links [data-theme-toggle]:focus-visible {
@@ -455,7 +458,7 @@ svg {
 .skill-block:active,
 .contact-line:active,
 .news-entry:active {
-  transform: translateY(-1px) scale(0.992);
+  transform: translateY(-1px) scale(0.996);
 }
 
 .menu-toggle {
@@ -710,10 +713,15 @@ h3 {
   border-radius: var(--radius);
   background: color-mix(in srgb, var(--surface) 94%, transparent);
   color: var(--teal);
-  transition: transform 220ms ease, border-color 220ms ease, box-shadow 220ms ease;
+  transition: transform var(--motion-control) var(--ease-interactive), border-color var(--motion-control) ease, box-shadow var(--motion-control) var(--ease-interactive);
 }
 
-.social-dock a:hover,
+.social-dock a:hover {
+  transform: translateY(-2px) scale(1.025);
+  border-color: color-mix(in srgb, var(--teal) 42%, var(--line));
+  box-shadow: 0 12px 28px rgba(7, 15, 28, 0.11);
+}
+
 .code-card:hover,
 .research-card:hover,
 .timeline-item:hover,
@@ -721,13 +729,13 @@ h3 {
 .card:hover,
 .skill-block:hover,
 .contact-line:hover {
-  transform: translateY(-7px) scale(1.028);
+  transform: translateY(-4px) scale(1.01);
   border-color: color-mix(in srgb, var(--teal) 42%, var(--line));
-  box-shadow: 0 20px 46px rgba(7, 15, 28, 0.14);
+  box-shadow: 0 18px 40px rgba(7, 15, 28, 0.12);
 }
 
 .contact-line:hover {
-  transform: translateY(-3px) scale(1.01);
+  transform: translateY(-2px) scale(1.004);
   box-shadow: 0 12px 28px rgba(7, 15, 28, 0.09);
 }
 
@@ -810,7 +818,7 @@ h3 {
     linear-gradient(135deg, color-mix(in srgb, var(--surface) 98%, transparent), color-mix(in srgb, var(--teal-soft) 52%, var(--surface)));
   padding: 0.72rem 2.56rem 0.72rem 0.72rem;
   box-shadow: var(--shadow-soft);
-  transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
+  transition: transform var(--motion-card) var(--ease-interactive), border-color var(--motion-card) ease, box-shadow var(--motion-card) var(--ease-interactive);
 }
 
 .affiliation-card::before {
@@ -826,7 +834,7 @@ h3 {
 }
 
 .affiliation-card:hover {
-  transform: translateY(-5px) scale(1.025);
+  transform: translateY(-3px) scale(1.008);
   border-color: color-mix(in srgb, var(--teal) 42%, var(--line));
   box-shadow: 0 18px 42px rgba(7, 15, 28, 0.12);
 }
@@ -861,14 +869,14 @@ h3 {
   color: var(--teal);
   padding: 0.28rem;
   transform: translateY(-50%);
-  transition: transform 160ms ease, border-color 160ms ease, background 160ms ease, color 160ms ease;
+  transition: transform var(--motion-control) var(--ease-interactive), border-color var(--motion-control) ease, background var(--motion-control) ease, color var(--motion-control) ease;
 }
 
 .affiliation-card:hover > svg {
   border-color: color-mix(in srgb, var(--amber) 42%, var(--teal));
   background: color-mix(in srgb, var(--amber-soft) 70%, var(--surface));
   color: color-mix(in srgb, var(--teal) 72%, #06111a);
-  transform: translateY(-50%) scale(1.06);
+  transform: translateY(-50%) scale(1.025);
 }
 
 .affiliation-card strong {
@@ -1015,8 +1023,7 @@ h3 {
   background:
     linear-gradient(180deg, color-mix(in srgb, var(--surface) 98%, transparent), color-mix(in srgb, var(--teal-soft) 35%, var(--surface)));
   padding: 0.58rem 0.56rem;
-  transition: transform 180ms ease, border-color 180ms ease, background 180ms ease, box-shadow 180ms ease;
-  will-change: transform;
+  transition: transform var(--motion-control) var(--ease-interactive), border-color var(--motion-control) ease, background var(--motion-control) ease, box-shadow var(--motion-control) var(--ease-interactive);
 }
 
 .scholar-stat::before {
@@ -1040,7 +1047,7 @@ h3 {
 }
 
 .scholar-stat:hover {
-  transform: translateY(-3px) scale(1.04);
+  transform: translateY(-2px) scale(1.012);
   border-color: color-mix(in srgb, var(--teal) 34%, var(--line));
   box-shadow: 0 12px 26px rgba(7, 15, 28, 0.12);
 }
@@ -1156,7 +1163,7 @@ h3 {
     linear-gradient(180deg, color-mix(in srgb, var(--surface) 98%, transparent), color-mix(in srgb, var(--surface-2) 88%, transparent));
   padding: 0.92rem 1rem;
   box-shadow: 0 10px 26px rgba(7, 15, 28, 0.05);
-  transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease, background 160ms ease;
+  transition: transform var(--motion-card) var(--ease-interactive), border-color var(--motion-card) ease, box-shadow var(--motion-card) var(--ease-interactive), background var(--motion-card) ease;
 }
 
 .news-entry > div,
@@ -1174,7 +1181,7 @@ h3 {
 }
 
 .news-entry:hover {
-  transform: translateY(-5px) scale(1.018);
+  transform: translateY(-3px) scale(1.006);
   border-color: color-mix(in srgb, var(--teal) 34%, var(--line));
   background:
     linear-gradient(180deg, color-mix(in srgb, var(--teal-soft) 45%, var(--surface)), color-mix(in srgb, var(--surface) 94%, transparent));
@@ -1300,7 +1307,7 @@ h3 {
 .contact-line {
   position: relative;
   overflow: hidden;
-  will-change: transform;
+  transition: transform var(--motion-card) var(--ease-interactive), border-color var(--motion-card) ease, box-shadow var(--motion-card) var(--ease-interactive), background var(--motion-card) ease;
 }
 
 .research-card::after,
@@ -1322,7 +1329,7 @@ h3 {
     linear-gradient(120deg, transparent 8%, color-mix(in srgb, var(--teal) 8%, transparent) 38%, color-mix(in srgb, var(--blue) 7%, transparent) 56%, transparent 78%);
   opacity: 0;
   transform: translateX(-12%);
-  transition: opacity 180ms ease, transform 220ms ease;
+  transition: opacity var(--motion-control) ease, transform var(--motion-card) var(--ease-interactive);
   pointer-events: none;
 }
 
@@ -1376,7 +1383,7 @@ h3 {
   padding: 1.05rem;
   cursor: pointer;
   text-align: left;
-  transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease, background 160ms ease;
+  transition: transform var(--motion-card) var(--ease-interactive), border-color var(--motion-card) ease, box-shadow var(--motion-card) var(--ease-interactive), background var(--motion-card) ease;
 }
 
 .timeline-item {
@@ -1547,16 +1554,16 @@ h3 {
   align-items: center;
   padding: 1rem;
   transform-origin: center;
-  transition: transform 240ms ease, border-color 240ms ease, box-shadow 240ms ease, background 240ms ease;
+  transition: transform var(--motion-card) var(--ease-interactive), border-color var(--motion-card) ease, box-shadow var(--motion-card) var(--ease-interactive), background var(--motion-card) ease;
 }
 
 .pub-card:hover,
 .paper-card:hover {
-  transform: translateY(-8px) scale(1.032);
+  transform: translateY(-4px) scale(1.008);
   border-color: color-mix(in srgb, var(--teal) 48%, var(--line));
   background:
     linear-gradient(180deg, color-mix(in srgb, var(--teal-soft) 34%, var(--surface)), color-mix(in srgb, var(--surface) 94%, transparent));
-  box-shadow: 0 24px 58px rgba(7, 15, 28, 0.16);
+  box-shadow: 0 20px 46px rgba(7, 15, 28, 0.13);
 }
 
 .paper-title {
@@ -1670,7 +1677,7 @@ h3 {
   gap: 0.9rem;
   align-items: center;
   padding: 1rem;
-  transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
+  transition: transform var(--motion-card) var(--ease-interactive), border-color var(--motion-card) ease, box-shadow var(--motion-card) var(--ease-interactive);
 }
 
 .timeline-item::before {
@@ -1766,7 +1773,7 @@ h3 {
   gap: 0.56rem;
   overflow: hidden;
   padding: 1rem;
-  transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease, background 160ms ease;
+  transition: transform var(--motion-card) var(--ease-interactive), border-color var(--motion-card) ease, box-shadow var(--motion-card) var(--ease-interactive), background var(--motion-card) ease;
 }
 
 .code-card::before {
@@ -1976,11 +1983,11 @@ h3 {
   border-radius: var(--radius);
   background: color-mix(in srgb, var(--surface) 82%, transparent);
   padding: 0.58rem 0.64rem;
-  transition: transform 160ms ease, border-color 160ms ease, background 160ms ease;
+  transition: transform 340ms var(--ease-interactive), border-color 340ms ease, background 340ms ease;
 }
 
 .achievement-list p:hover {
-  transform: translateX(4px) scale(1.022);
+  transform: translateX(2px) scale(1.004);
   border-color: color-mix(in srgb, var(--teal) 34%, var(--line));
   background: color-mix(in srgb, var(--teal-soft) 44%, var(--surface));
 }
@@ -2035,7 +2042,7 @@ h3 {
   border-radius: var(--radius);
   background: rgba(255, 255, 255, 0.06);
   padding: 0.78rem;
-  transition: transform 260ms ease, border-color 260ms ease, box-shadow 260ms ease, background 260ms ease;
+  transition: transform var(--motion-card) var(--ease-interactive), border-color var(--motion-card) ease, box-shadow var(--motion-card) var(--ease-interactive), background var(--motion-card) ease;
 }
 
 .contact-layout {
@@ -2100,7 +2107,7 @@ h3 {
 
 .contact-form .button {
   align-self: flex-start;
-  transition: transform 320ms cubic-bezier(0.2, 0.8, 0.2, 1), border-color 320ms ease, box-shadow 320ms ease, background 320ms ease, color 320ms ease;
+  transition: transform var(--motion-control) var(--ease-interactive), border-color var(--motion-control) ease, box-shadow var(--motion-control) var(--ease-interactive), background var(--motion-control) ease, color var(--motion-control) ease;
 }
 
 .contact-form .button:hover {
@@ -2262,10 +2269,13 @@ pre {
   translate: 0 18px;
   filter: blur(2px);
   transition:
-    opacity 760ms cubic-bezier(0.22, 1, 0.36, 1),
-    translate 760ms cubic-bezier(0.22, 1, 0.36, 1),
-    filter 520ms ease-out;
-  transition-delay: var(--reveal-delay, 0ms);
+    opacity 760ms cubic-bezier(0.22, 1, 0.36, 1) var(--reveal-delay, 0ms),
+    translate 760ms cubic-bezier(0.22, 1, 0.36, 1) var(--reveal-delay, 0ms),
+    filter 520ms ease-out var(--reveal-delay, 0ms),
+    transform var(--hover-duration, var(--motion-card)) var(--ease-interactive),
+    border-color var(--hover-duration, var(--motion-card)) ease,
+    box-shadow var(--hover-duration, var(--motion-card)) var(--ease-interactive),
+    color var(--hover-duration, var(--motion-card)) ease;
 }
 
 .reveal-ready .reveal.in-view {
@@ -2356,7 +2366,7 @@ pre {
     visibility: hidden;
     pointer-events: none;
     transform: translateX(-50%) translateY(-10px) scale(0.98);
-    transition: opacity 180ms ease, transform 180ms ease, visibility 180ms ease;
+    transition: opacity var(--motion-control) ease, transform var(--motion-control) var(--ease-interactive), visibility var(--motion-control) ease;
   }
 
   .nav-links.open {
@@ -2378,14 +2388,14 @@ pre {
   }
 
   .nav-links a:not(.nav-cta):hover {
-    transform: translateY(-3px) scale(1.035);
+    transform: translateY(-1px) scale(1.008);
     border-color: color-mix(in srgb, var(--teal) 34%, var(--line));
     background: color-mix(in srgb, var(--teal-soft) 52%, var(--surface));
   }
 
   .nav-links a:not(.nav-cta).active,
   .nav-links a:not(.nav-cta)[aria-current="page"] {
-    transform: translateY(-2px) scale(1.018);
+    transform: translateY(-1px) scale(1.004);
     border-color: color-mix(in srgb, var(--teal) 54%, #06111a);
   }
 
@@ -2405,7 +2415,7 @@ pre {
   }
 
   .nav-links .nav-cta:hover {
-    transform: translateY(-3px) scale(1.035);
+    transform: translateY(-1px) scale(1.008);
     border-color: color-mix(in srgb, var(--teal) 38%, var(--line));
     background: color-mix(in srgb, var(--teal-soft) 58%, var(--surface));
     color: var(--ink-strong);
