@@ -343,7 +343,7 @@
   const observer = "IntersectionObserver" in window && !reduceMotion
     ? new IntersectionObserver((entries) => {
       const entering = entries
-        .filter((entry) => entry.isIntersecting)
+        .filter((entry) => entry.isIntersecting && entry.intersectionRatio >= 0.12)
         .sort((a, b) => {
           const topDifference = a.boundingClientRect.top - b.boundingClientRect.top;
           return Math.abs(topDifference) > 16
@@ -351,17 +351,19 @@
             : a.boundingClientRect.left - b.boundingClientRect.left;
         });
 
+      entries
+        .filter((entry) => !entry.isIntersecting || entry.intersectionRatio < 0.12)
+        .forEach((entry) => {
+          entry.target.classList.remove("in-view");
+          entry.target.style.removeProperty("--reveal-delay");
+        });
+
       entering.forEach((entry, index) => {
-        const delay = Math.min(index, 4) * 65;
+        const delay = Math.min(index, 4) * 80;
         entry.target.style.setProperty("--reveal-delay", `${delay}ms`);
         entry.target.classList.add("in-view");
-        observer.unobserve(entry.target);
-        window.setTimeout(() => {
-          entry.target.classList.remove("reveal", "in-view");
-          entry.target.style.removeProperty("--reveal-delay");
-        }, 760 + delay);
       });
-    }, { rootMargin: "0px 0px -7% 0px", threshold: 0.12 })
+    }, { rootMargin: "0px 0px -7% 0px", threshold: [0, 0.12] })
     : null;
 
   if (observer && revealElements.length) {
