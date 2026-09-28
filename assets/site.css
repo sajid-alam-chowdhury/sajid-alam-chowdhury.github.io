@@ -2732,7 +2732,6 @@ pre {
     margin-top: 0;
     padding: 0.9rem 0.86rem;
     font-size: 1rem;
-    line-height: 1.5;
     text-align: justify;
     text-align-last: left;
   }
@@ -2856,6 +2855,13 @@ pre {
 }
 
 @media (max-width: 480px) {
+  .bio-affiliation-clause {
+    display: inline-block;
+    white-space: nowrap;
+    text-align: left;
+    word-spacing: normal;
+  }
+
   .brand-name {
     max-width: min(246px, calc(100vw - 126px));
     font-size: clamp(0.78rem, 3.35vw, 0.95rem);
