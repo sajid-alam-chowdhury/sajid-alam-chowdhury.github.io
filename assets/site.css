@@ -2641,6 +2641,30 @@ pre {
 }
 
 @media (max-width: 760px) {
+  .hero-bio,
+  .section-head > p,
+  .contact-copy > p:not(.section-kicker),
+  .page-hero p:not(.kicker),
+  .research-detail p,
+  .paper-main p {
+    text-justify: inter-character;
+    hyphenate-limit-chars: 8 3 3;
+    -webkit-hyphenate-limit-before: 3;
+    -webkit-hyphenate-limit-after: 3;
+  }
+
+  .news-entry p:not(.news-kind),
+  .pub-card p,
+  .paper-card p,
+  .timeline-item p,
+  .card p,
+  .achievement-card p,
+  .skill-block p {
+    text-align: start;
+    text-align-last: auto;
+    text-wrap: pretty;
+  }
+
   .site-shell,
   .container,
   .wrap {
