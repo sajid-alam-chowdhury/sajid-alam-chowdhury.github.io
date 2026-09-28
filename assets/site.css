@@ -2732,6 +2732,7 @@ pre {
     margin-top: 0;
     padding: 0.9rem 0.86rem;
     font-size: 1rem;
+    line-height: 1.5;
     text-align: justify;
     text-align-last: left;
   }
