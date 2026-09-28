@@ -568,27 +568,6 @@ h3 {
   line-height: 1.35;
 }
 
-@supports ((background-clip: text) or (-webkit-background-clip: text)) {
-  .hero-line {
-    background-image: linear-gradient(96deg, #9b6508 0%, #27313f 39%, #27313f 59%, #08766f 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-
-  [data-theme="dark"] .hero-line {
-    background-image: linear-gradient(96deg, #f1c668 0%, #f4f7f8 40%, #f4f7f8 58%, #65dfd4 100%);
-  }
-}
-
-@media (forced-colors: active) {
-  .hero-line {
-    background: none;
-    color: CanvasText;
-    -webkit-text-fill-color: currentColor;
-  }
-}
-
 .section-head > p,
 .contact-copy > p:not(.section-kicker),
 .page-hero p:not(.kicker) {
@@ -631,13 +610,8 @@ h3 {
   text-align: left;
   text-align-last: left;
   text-wrap: pretty;
-  hyphens: auto;
-  -webkit-hyphens: auto;
-  hyphenate-limit-chars: 12 5 5;
-  -webkit-hyphenate-limit-before: 5;
-  -webkit-hyphenate-limit-after: 5;
-  -webkit-hyphenate-limit-lines: 2;
-  word-spacing: normal;
+  hyphens: none;
+  -webkit-hyphens: none;
   position: relative;
   margin: 1.12rem 0 0;
   isolation: isolate;
@@ -648,6 +622,14 @@ h3 {
     linear-gradient(135deg, color-mix(in srgb, var(--surface) 50%, transparent), transparent 62%);
   box-shadow: none;
   padding: 1rem 1.24rem 1rem 1.3rem;
+}
+
+@media (min-width: 1100px) {
+  .hero-bio {
+    text-justify: inter-character;
+    hyphens: none;
+    -webkit-hyphens: none;
+  }
 }
 
 .hero-bio::before,
@@ -688,34 +670,6 @@ h3 {
   text-decoration: underline;
   text-decoration-color: color-mix(in srgb, var(--teal) 45%, transparent);
   text-underline-offset: 0.18em;
-}
-
-.hero-bio.soft-justified {
-  text-align: left;
-  text-wrap: wrap;
-  hyphens: none;
-  -webkit-hyphens: none;
-}
-
-.soft-justify-line {
-  min-width: 0;
-  display: flex;
-  align-items: baseline;
-  column-gap: var(--soft-line-gap, 0.26em);
-  white-space: nowrap;
-}
-
-.soft-justify-token {
-  min-width: 0;
-  flex: 0 0 auto;
-}
-
-.soft-justify-measure {
-  position: absolute;
-  width: max-content;
-  visibility: hidden;
-  pointer-events: none;
-  white-space: pre;
 }
 
 .keep-together {
@@ -2760,8 +2714,14 @@ pre {
     margin-top: 0;
     padding: 0.9rem 0.86rem;
     font-size: 1rem;
-    text-align: left;
+    text-align: justify;
     text-align-last: left;
+  }
+
+  .hero-bio .keep-together {
+    display: inline-block;
+    text-align: left;
+    word-spacing: normal;
   }
 
   .focus-console {
