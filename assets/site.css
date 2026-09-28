@@ -2909,8 +2909,8 @@ pre {
 
   .hero-bio {
     margin-top: 0;
-    padding: 0.86rem 0.78rem;
-    font-size: 0.96rem;
+    padding: 0.84rem 0.74rem;
+    font-size: 0.94rem;
     line-height: 1.62;
     text-align: justify;
     text-align-last: left;
@@ -3100,8 +3100,8 @@ pre {
   }
 
   .hero-bio {
-    font-size: 0.92rem;
-    line-height: 1.6;
+    font-size: 0.9rem;
+    line-height: 1.58;
   }
 
   .focus-console > span:first-child {
@@ -3172,9 +3172,10 @@ pre {
   }
 
   .hero-bio {
-    hyphenate-limit-chars: 10 4 4;
-    -webkit-hyphenate-limit-before: 4;
-    -webkit-hyphenate-limit-after: 4;
+    text-justify: inter-character;
+    hyphenate-limit-chars: 7 3 3;
+    -webkit-hyphenate-limit-before: 3;
+    -webkit-hyphenate-limit-after: 3;
   }
 
   .hero-bio .keep-together {
@@ -3276,7 +3277,7 @@ pre {
   }
 
   .hero-bio {
-    padding: 0.8rem 0.68rem;
+    padding: 0.76rem 0.58rem;
   }
 
   #beyond .card {
@@ -3339,8 +3340,8 @@ pre {
 
 @media (max-width: 380px) {
   .hero-bio {
-    padding-inline: 0.8rem;
-    font-size: 0.92rem;
+    padding-inline: 0.5rem;
+    font-size: 0.88rem;
   }
 
   .hero-visual {
