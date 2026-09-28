@@ -88,6 +88,10 @@ html.page-ready {
   scroll-behavior: smooth;
 }
 
+main > section[id]:not(#top) {
+  scroll-margin-top: -4rem;
+}
+
 body {
   min-height: 100vh;
   margin: 0;
@@ -2655,6 +2659,18 @@ pre {
 }
 
 @media (max-width: 760px) {
+  html {
+    scroll-padding-top: 74px;
+  }
+
+  main > section[id]:not(#top) {
+    scroll-margin-top: -2.8rem;
+  }
+
+  .section {
+    padding-block: 3.4rem;
+  }
+
   main h1,
   main h2,
   main h3,
@@ -3080,6 +3096,14 @@ pre {
 }
 
 @media (max-width: 480px) {
+  main > section[id]:not(#top) {
+    scroll-margin-top: -2.5rem;
+  }
+
+  .section {
+    padding-block: 3rem;
+  }
+
   .paper-hero h1 {
     font-size: clamp(1.28rem, 5.2vw, 1.55rem);
     line-height: 1.2;
