@@ -4,6 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script>document.documentElement.dataset.theme = localStorage.getItem("sajid-site-theme-v2") || "dark";</script>
+  <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/jetbrains-mono-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" as="image" href="assets/img/mypic_cropped.jpg" fetchpriority="high">
   <link rel="icon" href="/favicon.ico?v=20260928-current2" sizes="16x16 32x32 64x64">
   <link rel="shortcut icon" href="/favicon.ico?v=20260928-current2">
   <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg?v=20260928-current2" sizes="any">
@@ -55,9 +59,9 @@
       ]
     }
   </script>
-  <link rel="stylesheet" href="assets/site.css?v=20260928-logo2">
+  <link rel="stylesheet" href="assets/site.css?v=20260928-startup3">
   <script src="assets/lucide.min.js?v=20260913-polish70" defer></script>
-  <script src="assets/site.js?v=20260927-reveal4" defer></script>
+  <script src="assets/site.js?v=20260928-startup3" defer></script>
 </head>
 <body>
   <div class="scroll-progress" aria-hidden="true"></div>
@@ -91,7 +95,7 @@
   <main id="main">
     <section class="hero" id="top">
       <div class="site-shell hero-grid">
-        <div class="hero-copy reveal">
+        <div class="hero-copy">
           <p class="eyebrow">Computer Science PhD Student &middot; Wayne State University</p>
           <h1>Md. Sajid Alam Chowdhury</h1>
           <p class="hero-line">Building trustworthy multimodal systems that can reason reliably, preserve privacy, and remain robust.</p>
@@ -121,9 +125,9 @@
           </div>
         </div>
 
-        <aside class="hero-visual reveal" aria-label="Profile image and research profile">
+        <aside class="hero-visual" aria-label="Profile image and research profile">
           <figure class="portrait-panel">
-            <img src="assets/img/mypic_cropped.jpg" alt="Portrait of Md. Sajid Alam Chowdhury">
+            <img src="assets/img/mypic_cropped.jpg" width="960" height="911" fetchpriority="high" alt="Portrait of Md. Sajid Alam Chowdhury">
           </figure>
           <div class="affiliation-grid">
             <a class="affiliation-card" href="https://engineering.wayne.edu/" target="_blank" rel="noreferrer">
