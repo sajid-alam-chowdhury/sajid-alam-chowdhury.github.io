@@ -2695,15 +2695,36 @@ pre {
   .card p,
   .achievement-card p,
   .skill-block p {
-    text-align: start;
-    text-align-last: auto;
+    text-align: justify;
+    text-align-last: left;
+    text-justify: inter-character;
     text-wrap: wrap;
-    hyphens: none;
-    -webkit-hyphens: none;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphenate-limit-chars: 8 3 3;
+    -webkit-hyphenate-limit-before: 3;
+    -webkit-hyphenate-limit-after: 3;
+    overflow-wrap: break-word;
+  }
+
+  .check-list li,
+  .card-bullets li,
+  .timeline-detail li,
+  .achievement-list span {
+    text-align: justify;
+    text-align-last: left;
+    text-justify: inter-character;
+    text-wrap: wrap;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphenate-limit-chars: 8 3 3;
+    -webkit-hyphenate-limit-before: 3;
+    -webkit-hyphenate-limit-after: 3;
     overflow-wrap: break-word;
   }
 
   .section-head > p,
+  .contact-copy > p:not(.section-kicker),
   .page-hero p:not(.kicker) {
     font-size: 0.94rem;
     line-height: 1.58;
@@ -3113,8 +3134,8 @@ pre {
   }
 
   .contact-copy > p:not(.section-kicker) {
-    font-size: 0.94rem;
-    line-height: 1.58;
+    font-size: 0.9rem;
+    line-height: 1.52;
   }
 
   .research-card h3,
@@ -3148,10 +3169,6 @@ pre {
     color: var(--muted);
     font-size: 0.9rem;
     line-height: 1.52;
-    text-align: start;
-    hyphens: none;
-    -webkit-hyphens: none;
-    overflow-wrap: break-word;
   }
 
   .news-entry {
