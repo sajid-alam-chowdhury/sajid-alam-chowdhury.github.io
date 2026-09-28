@@ -602,6 +602,11 @@ h3 {
   max-width: 760px;
   color: var(--muted);
   font-size: 1.02rem;
+  text-align: left;
+  text-align-last: left;
+  text-wrap: pretty;
+  hyphens: none;
+  -webkit-hyphens: none;
   position: relative;
   margin: 1.12rem 0 0;
   isolation: isolate;
@@ -612,6 +617,14 @@ h3 {
     linear-gradient(135deg, color-mix(in srgb, var(--surface) 50%, transparent), transparent 62%);
   box-shadow: none;
   padding: 1rem 1.24rem 1rem 1.3rem;
+}
+
+@media (min-width: 1100px) {
+  .hero-bio {
+    text-align: justify;
+    text-justify: inter-character;
+    text-wrap: wrap;
+  }
 }
 
 .hero-bio::before,
