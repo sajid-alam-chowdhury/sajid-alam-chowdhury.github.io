@@ -2705,7 +2705,7 @@ pre {
   }
 
   .hero-bio {
-    text-justify: inter-character;
+    text-justify: inter-word;
     hyphenate-limit-chars: 8 3 3;
     -webkit-hyphenate-limit-before: 3;
     -webkit-hyphenate-limit-after: 3;
@@ -2725,7 +2725,7 @@ pre {
   .skill-block p {
     text-align: justify;
     text-align-last: left;
-    text-justify: inter-character;
+    text-justify: inter-word;
     text-wrap: wrap;
     hyphens: auto;
     -webkit-hyphens: auto;
@@ -2738,15 +2738,12 @@ pre {
   .check-list li,
   .card-bullets li,
   .timeline-detail li {
-    text-align: justify;
-    text-align-last: left;
-    text-justify: inter-character;
+    text-align: left;
+    text-align-last: auto;
+    text-justify: auto;
     text-wrap: wrap;
-    hyphens: auto;
-    -webkit-hyphens: auto;
-    hyphenate-limit-chars: 8 3 3;
-    -webkit-hyphenate-limit-before: 3;
-    -webkit-hyphenate-limit-after: 3;
+    hyphens: none;
+    -webkit-hyphens: none;
     overflow-wrap: break-word;
   }
 
@@ -2757,11 +2754,41 @@ pre {
     line-height: 1.58;
   }
 
+  .research-card h3,
+  .news-entry h3,
+  .pub-card .paper-title,
+  .paper-card .paper-title,
+  .timeline-item h3,
+  .skill-block h3,
+  .achievement-card h3,
+  .beyond-grid .card h3,
+  .contact-line strong {
+    font-size: 0.98rem;
+    line-height: 1.32;
+  }
+
+  .research-detail h3 {
+    font-size: 1.15rem;
+  }
+
+  .research-detail p,
+  .check-list li,
+  .news-entry p:not(.news-kind),
+  .pub-card > div > p,
+  .paper-card > div > p,
+  .timeline-item > div > p,
+  .achievement-list span,
+  .card-bullets li,
+  .timeline-detail li {
+    font-size: 0.94rem;
+    line-height: 1.55;
+  }
+
   #research .section-head > p,
   #coding .section-head > p {
     text-align: justify;
     text-align-last: left;
-    text-justify: inter-character;
+    text-justify: inter-word;
     hyphens: auto;
     -webkit-hyphens: auto;
     hyphenate-limit-chars: 9 4 4;
@@ -2774,7 +2801,7 @@ pre {
     line-height: 1.68;
     text-align: justify;
     text-align-last: left;
-    text-justify: inter-character;
+    text-justify: inter-word;
     hyphens: auto;
     -webkit-hyphens: auto;
     hyphenate-limit-chars: 8 3 3;
@@ -3024,15 +3051,6 @@ pre {
     padding-left: 1rem;
     font-size: 0.92rem;
     line-height: 1.52;
-    text-align: justify;
-    text-align-last: left;
-    text-justify: inter-character;
-    text-wrap: wrap;
-    hyphens: auto;
-    -webkit-hyphens: auto;
-    hyphenate-limit-chars: 9 4 4;
-    -webkit-hyphenate-limit-before: 4;
-    -webkit-hyphenate-limit-after: 4;
   }
 
   .timeline {
@@ -3229,7 +3247,7 @@ pre {
   }
 
   .hero-bio {
-    text-justify: inter-character;
+    text-justify: inter-word;
     hyphenate-limit-chars: 7 3 3;
     -webkit-hyphenate-limit-before: 3;
     -webkit-hyphenate-limit-after: 3;
