@@ -2315,13 +2315,25 @@ pre {
 }
 
 .tab-button {
+  min-height: 38px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.44rem;
   justify-content: flex-start;
   border-color: var(--line);
+  border-radius: var(--radius);
   background: var(--surface);
+  color: var(--ink);
   padding: 0.74rem;
+  font-size: 0.88rem;
+  font-weight: 750;
+  cursor: pointer;
 }
 
-.tab-button.active,
+.tab-button.active {
+  display: inline-flex;
+}
+
 .tab-panel.active {
   display: block;
 }
@@ -2739,11 +2751,11 @@ pre {
   }
 
   .nav {
-    min-height: 72px;
+    min-height: 66px;
   }
 
   .nav-links {
-    top: 80px;
+    top: 74px;
     width: min(100% - 24px, 520px);
     gap: 0.48rem;
     padding: 0.7rem;
@@ -2770,11 +2782,15 @@ pre {
 
   .hero-copy > h1 {
     order: 2;
+    font-size: clamp(2.05rem, 7.2vw, 2.3rem);
+    line-height: 1.02;
   }
 
   .hero-copy > .hero-line {
     order: 3;
     margin-top: 0.45rem;
+    font-size: 1.05rem;
+    line-height: 1.4;
   }
 
   .hero-visual {
@@ -2893,8 +2909,9 @@ pre {
 
   .hero-bio {
     margin-top: 0;
-    padding: 0.9rem 0.86rem;
-    font-size: 1rem;
+    padding: 0.86rem 0.78rem;
+    font-size: 0.96rem;
+    line-height: 1.62;
     text-align: justify;
     text-align-last: left;
   }
@@ -2944,6 +2961,30 @@ pre {
   .skill-matrix,
   .field-grid {
     grid-template-columns: 1fr;
+  }
+
+  #beyond .card {
+    width: 100%;
+    padding: 0.9rem;
+  }
+
+  #beyond .card-bullets {
+    width: 100%;
+  }
+
+  #beyond .card-bullets li {
+    padding-left: 1rem;
+    font-size: 0.92rem;
+    line-height: 1.52;
+    text-align: justify;
+    text-align-last: left;
+    text-justify: inter-character;
+    text-wrap: wrap;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphenate-limit-chars: 9 4 4;
+    -webkit-hyphenate-limit-before: 4;
+    -webkit-hyphenate-limit-after: 4;
   }
 
   .timeline {
@@ -3049,18 +3090,18 @@ pre {
   }
 
   .hero-copy > h1 {
-    font-size: clamp(2.05rem, 9vw, 2.3rem);
+    font-size: clamp(1.95rem, 8.3vw, 2.18rem);
     line-height: 1.02;
   }
 
   .hero-line {
-    font-size: 1.03rem;
+    font-size: 0.98rem;
     line-height: 1.4;
   }
 
   .hero-bio {
-    font-size: 0.94rem;
-    line-height: 1.62;
+    font-size: 0.92rem;
+    line-height: 1.6;
   }
 
   .focus-console > span:first-child {
@@ -3235,7 +3276,15 @@ pre {
   }
 
   .hero-bio {
-    padding: 0.86rem 0.8rem;
+    padding: 0.8rem 0.68rem;
+  }
+
+  #beyond .card {
+    padding: 0.84rem;
+  }
+
+  #beyond .card-bullets li {
+    padding-left: 0.96rem;
   }
 
   .hero-actions .button,
