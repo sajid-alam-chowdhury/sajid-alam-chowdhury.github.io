@@ -2668,44 +2668,6 @@ pre {
   .achievement-grid {
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 500px), 1fr));
   }
-
-  .section-head > p,
-  .contact-copy > p:not(.section-kicker),
-  .page-hero p:not(.kicker),
-  .hero-bio {
-    font-size: clamp(0.96rem, calc(0.84rem + 0.26vw), 1.02rem);
-  }
-
-  .research-detail p,
-  .news-entry p:not(.news-kind),
-  .pub-card p,
-  .paper-card p,
-  .timeline-item p,
-  .card p,
-  .paper-main p,
-  .skill-block p,
-  .check-list li,
-  .card-bullets li,
-  .timeline-detail li,
-  .achievement-list span {
-    font-size: clamp(0.96rem, calc(0.875rem + 0.18vw), 1rem);
-  }
-
-  .research-card h3,
-  .news-entry h3,
-  .pub-card .paper-title,
-  .paper-card .paper-title,
-  .timeline-item h3,
-  .skill-block h3,
-  .achievement-card h3,
-  .beyond-grid .card h3,
-  .contact-line strong {
-    font-size: clamp(0.99rem, calc(0.884rem + 0.22vw), 1.04rem);
-  }
-
-  .research-detail h3 {
-    font-size: clamp(1.17rem, calc(0.937rem + 0.49vw), 1.28rem);
-  }
 }
 
 @media (max-width: 760px) {
@@ -2779,20 +2741,17 @@ pre {
     text-align: left;
     text-align-last: auto;
     text-justify: auto;
-    text-wrap: pretty;
-    hyphens: auto;
-    -webkit-hyphens: auto;
-    hyphenate-limit-chars: 10 4 4;
-    -webkit-hyphenate-limit-before: 4;
-    -webkit-hyphenate-limit-after: 4;
+    text-wrap: wrap;
+    hyphens: none;
+    -webkit-hyphens: none;
     overflow-wrap: break-word;
   }
 
   .section-head > p,
   .contact-copy > p:not(.section-kicker),
   .page-hero p:not(.kicker) {
-    font-size: clamp(0.9rem, 2vw, 0.94rem);
-    line-height: 1.54;
+    font-size: 0.94rem;
+    line-height: 1.58;
   }
 
   .research-card h3,
@@ -2804,12 +2763,12 @@ pre {
   .achievement-card h3,
   .beyond-grid .card h3,
   .contact-line strong {
-    font-size: clamp(0.94rem, 2.1vw, 0.98rem);
+    font-size: 0.98rem;
     line-height: 1.32;
   }
 
   .research-detail h3 {
-    font-size: clamp(1.1rem, 2.5vw, 1.15rem);
+    font-size: 1.15rem;
   }
 
   .research-detail p,
@@ -2821,8 +2780,8 @@ pre {
   .achievement-list span,
   .card-bullets li,
   .timeline-detail li {
-    font-size: clamp(0.9rem, 2vw, 0.94rem);
-    line-height: 1.52;
+    font-size: 0.94rem;
+    line-height: 1.55;
   }
 
   #research .section-head > p,
@@ -2838,8 +2797,8 @@ pre {
   }
 
   .paper-main .abstract {
-    font-size: clamp(0.9rem, 2vw, 0.94rem);
-    line-height: 1.62;
+    font-size: 0.94rem;
+    line-height: 1.68;
     text-align: justify;
     text-align-last: left;
     text-justify: inter-word;
@@ -2905,7 +2864,7 @@ pre {
   .hero-copy > .hero-line {
     order: 3;
     margin-top: 0.45rem;
-    font-size: clamp(0.9rem, 2.2vw, 1.05rem);
+    font-size: 1.05rem;
     line-height: 1.4;
   }
 
@@ -3026,8 +2985,8 @@ pre {
   .hero-bio {
     margin-top: 0;
     padding: 0.84rem 0.74rem;
-    font-size: clamp(0.9rem, 2vw, 0.94rem);
-    line-height: 1.58;
+    font-size: 0.94rem;
+    line-height: 1.62;
     text-align: justify;
     text-align-last: left;
   }
@@ -3090,6 +3049,8 @@ pre {
 
   #beyond .card-bullets li {
     padding-left: 1rem;
+    font-size: 0.92rem;
+    line-height: 1.52;
   }
 
   .timeline {
