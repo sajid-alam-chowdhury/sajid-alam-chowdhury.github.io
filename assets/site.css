@@ -2705,7 +2705,7 @@ pre {
   }
 
   .hero-bio {
-    text-justify: inter-character;
+    text-justify: inter-word;
     hyphenate-limit-chars: 8 3 3;
     -webkit-hyphenate-limit-before: 3;
     -webkit-hyphenate-limit-after: 3;
@@ -2725,7 +2725,7 @@ pre {
   .skill-block p {
     text-align: justify;
     text-align-last: left;
-    text-justify: inter-character;
+    text-justify: inter-word;
     text-wrap: wrap;
     hyphens: auto;
     -webkit-hyphens: auto;
@@ -2740,7 +2740,7 @@ pre {
   .timeline-detail li {
     text-align: justify;
     text-align-last: left;
-    text-justify: inter-character;
+    text-justify: inter-word;
     text-wrap: wrap;
     hyphens: auto;
     -webkit-hyphens: auto;
@@ -2761,7 +2761,7 @@ pre {
   #coding .section-head > p {
     text-align: justify;
     text-align-last: left;
-    text-justify: inter-character;
+    text-justify: inter-word;
     hyphens: auto;
     -webkit-hyphens: auto;
     hyphenate-limit-chars: 9 4 4;
@@ -2774,7 +2774,7 @@ pre {
     line-height: 1.68;
     text-align: justify;
     text-align-last: left;
-    text-justify: inter-character;
+    text-justify: inter-word;
     hyphens: auto;
     -webkit-hyphens: auto;
     hyphenate-limit-chars: 8 3 3;
@@ -3026,7 +3026,7 @@ pre {
     line-height: 1.52;
     text-align: justify;
     text-align-last: left;
-    text-justify: inter-character;
+    text-justify: inter-word;
     text-wrap: wrap;
     hyphens: auto;
     -webkit-hyphens: auto;
@@ -3106,7 +3106,7 @@ pre {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 520px) {
   main > section[id]:not(#top) {
     scroll-margin-top: -2.5rem;
   }
@@ -3229,7 +3229,7 @@ pre {
   }
 
   .hero-bio {
-    text-justify: inter-character;
+    text-justify: inter-word;
     hyphenate-limit-chars: 7 3 3;
     -webkit-hyphenate-limit-before: 3;
     -webkit-hyphenate-limit-after: 3;
