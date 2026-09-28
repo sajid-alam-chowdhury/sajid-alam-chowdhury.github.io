@@ -669,6 +669,7 @@ h3 {
   min-height: 60px;
   display: flex;
   align-items: center;
+  align-content: center;
   flex-wrap: wrap;
   gap: 0.55rem;
   margin-top: 1.35rem;
@@ -696,10 +697,11 @@ h3 {
 
 .focus-console strong {
   color: var(--teal);
+  align-self: center;
   font-family: "Space Grotesk", Inter, ui-sans-serif, sans-serif;
   font-size: 1.06rem;
   font-weight: 600;
-  line-height: 1.2;
+  line-height: 1.28rem;
 }
 
 .cursor {
@@ -2695,7 +2697,6 @@ pre {
   .focus-console {
     min-height: 64px;
     padding: 0.62rem 0.78rem;
-    align-content: center;
   }
 
   .focus-console strong {
