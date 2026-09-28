@@ -589,11 +589,16 @@ h3 {
 .achievement-card p,
 .paper-main p,
 .skill-block p {
-  text-align: left;
+  text-align: justify;
   text-align-last: left;
-  text-wrap: pretty;
-  hyphens: none;
-  -webkit-hyphens: none;
+  text-justify: inter-word;
+  text-wrap: wrap;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphenate-limit-chars: 12 5 5;
+  -webkit-hyphenate-limit-before: 5;
+  -webkit-hyphenate-limit-after: 5;
+  -webkit-hyphenate-limit-lines: 2;
   overflow-wrap: break-word;
   word-spacing: normal;
 }
@@ -621,9 +626,9 @@ h3 {
 
 @media (min-width: 1100px) {
   .hero-bio {
-    text-align: justify;
     text-justify: inter-character;
-    text-wrap: wrap;
+    hyphens: none;
+    -webkit-hyphens: none;
   }
 }
 
@@ -2413,7 +2418,7 @@ pre {
     visibility: hidden;
     pointer-events: none;
     transform: translateX(-50%) translateY(-10px) scale(0.98);
-    transition: opacity var(--motion-control) ease, transform var(--motion-control) var(--ease-interactive), visibility var(--motion-control) ease;
+    transition: none;
   }
 
   .nav-links.open {
@@ -2421,6 +2426,14 @@ pre {
     visibility: visible;
     pointer-events: auto;
     transform: translateX(-50%) translateY(0) scale(1);
+    transition: opacity var(--motion-control) ease, transform var(--motion-control) var(--ease-interactive);
+  }
+
+  .nav-links.open.closing {
+    opacity: 0;
+    visibility: visible;
+    pointer-events: none;
+    transform: translateX(-50%) translateY(-10px) scale(0.98);
   }
 
   .nav-links a,
@@ -2699,7 +2712,9 @@ pre {
 
   .hero-bio {
     margin-top: 0;
-    text-align: left;
+    padding: 0.9rem 0.86rem;
+    font-size: 1rem;
+    text-align: justify;
     text-align-last: left;
   }
 
@@ -2917,7 +2932,7 @@ pre {
   }
 
   .hero-bio {
-    padding: 0.9rem 0.94rem 0.9rem 1rem;
+    padding: 0.86rem 0.8rem;
   }
 
   .hero-actions .button,

@@ -62,14 +62,38 @@
   const menuButton = document.querySelector("[data-menu-toggle]");
   const navLinks = document.querySelector("[data-nav-links]");
   if (menuButton && navLinks) {
-    const setMenuOpen = (open) => {
-      navLinks.classList.toggle("open", open);
-      root.classList.toggle("nav-open", open);
-      menuButton.setAttribute("aria-expanded", String(open));
+    let menuCloseTimer;
+
+    const finishMenuClose = () => {
+      navLinks.classList.remove("open", "closing");
+      root.classList.remove("nav-open");
+      menuButton.setAttribute("aria-expanded", "false");
+    };
+
+    const setMenuOpen = (open, animate = true) => {
+      window.clearTimeout(menuCloseTimer);
+
+      if (open) {
+        navLinks.classList.remove("closing");
+        navLinks.classList.add("open");
+        root.classList.add("nav-open");
+        menuButton.setAttribute("aria-expanded", "true");
+        return;
+      }
+
+      if (animate && window.innerWidth <= 1120 && navLinks.classList.contains("open")) {
+        navLinks.classList.add("closing");
+        menuButton.setAttribute("aria-expanded", "false");
+        menuCloseTimer = window.setTimeout(finishMenuClose, 360);
+        return;
+      }
+
+      finishMenuClose();
     };
 
     menuButton.addEventListener("click", () => {
-      setMenuOpen(!navLinks.classList.contains("open"));
+      const shouldOpen = !navLinks.classList.contains("open") || navLinks.classList.contains("closing");
+      setMenuOpen(shouldOpen);
     });
 
     navLinks.querySelectorAll("a").forEach((link) => {
@@ -89,7 +113,7 @@
     });
 
     window.addEventListener("resize", () => {
-      if (window.innerWidth > 1120) setMenuOpen(false);
+      if (window.innerWidth > 1120) setMenuOpen(false, false);
     }, { passive: true });
   }
 
