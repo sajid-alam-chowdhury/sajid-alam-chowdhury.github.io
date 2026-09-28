@@ -2855,13 +2855,6 @@ pre {
 }
 
 @media (max-width: 480px) {
-  .bio-affiliation-clause {
-    display: inline-block;
-    white-space: nowrap;
-    text-align: left;
-    word-spacing: normal;
-  }
-
   .brand-name {
     max-width: min(246px, calc(100vw - 126px));
     font-size: clamp(0.78rem, 3.35vw, 0.95rem);
