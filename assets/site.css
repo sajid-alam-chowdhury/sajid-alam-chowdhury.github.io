@@ -2559,7 +2559,7 @@ pre {
   }
 }
 
-@media (min-width: 761px) and (max-width: 900px) {
+@media (min-width: 761px) and (max-width: 1120px) {
   .hero {
     padding: 2.6rem 0 3.4rem;
   }
