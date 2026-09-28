@@ -3140,8 +3140,13 @@ pre {
   }
 
   .hero-line {
-    font-size: 0.98rem;
+    font-size: 0.95rem;
     line-height: 1.4;
+  }
+
+  .hero-line > span {
+    display: block;
+    white-space: nowrap;
   }
 
   .hero-bio {
@@ -3392,5 +3397,17 @@ pre {
   .portrait-panel {
     width: 78px;
     max-width: 78px;
+  }
+}
+
+@media (max-width: 420px) {
+  .hero-line {
+    font-size: 0.84rem;
+  }
+}
+
+@media (max-width: 365px) {
+  .hero-line > span {
+    white-space: normal;
   }
 }
