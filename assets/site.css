@@ -690,6 +690,34 @@ h3 {
   text-underline-offset: 0.18em;
 }
 
+.hero-bio.soft-justified {
+  text-align: left;
+  text-wrap: wrap;
+  hyphens: none;
+  -webkit-hyphens: none;
+}
+
+.soft-justify-line {
+  min-width: 0;
+  display: flex;
+  align-items: baseline;
+  column-gap: var(--soft-line-gap, 0.26em);
+  white-space: nowrap;
+}
+
+.soft-justify-token {
+  min-width: 0;
+  flex: 0 0 auto;
+}
+
+.soft-justify-measure {
+  position: absolute;
+  width: max-content;
+  visibility: hidden;
+  pointer-events: none;
+  white-space: pre;
+}
+
 .keep-together {
   white-space: nowrap;
 }

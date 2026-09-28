@@ -198,6 +198,110 @@
     window.setTimeout(tick, 1100);
   }
 
+  document.querySelectorAll("[data-soft-justify]").forEach((paragraph) => {
+    const sourceNodes = Array.from(paragraph.childNodes, (node) => node.cloneNode(true));
+    const accessibleText = paragraph.textContent.replace(/\s+/g, " ").trim();
+    const tokenSources = [];
+
+    sourceNodes.forEach((node) => {
+      if (node.nodeType === Node.TEXT_NODE) {
+        node.textContent.match(/\S+/g)?.forEach((word) => {
+          tokenSources.push({ type: "text", value: word });
+        });
+        return;
+      }
+
+      if (node.nodeType === Node.ELEMENT_NODE) {
+        tokenSources.push({ type: "element", value: node });
+      }
+    });
+
+    if (tokenSources.length < 2) return;
+
+    const makeToken = (source) => {
+      if (source.type === "element") {
+        const element = source.value.cloneNode(true);
+        element.classList.add("soft-justify-token");
+        return element;
+      }
+
+      const span = document.createElement("span");
+      span.className = "soft-justify-token";
+      span.textContent = source.value;
+      return span;
+    };
+
+    let lastWidth = -1;
+    const render = () => {
+      const styles = window.getComputedStyle(paragraph);
+      const availableWidth = paragraph.clientWidth
+        - Number.parseFloat(styles.paddingLeft)
+        - Number.parseFloat(styles.paddingRight);
+      if (availableWidth <= 0 || Math.abs(availableWidth - lastWidth) < 0.5) return;
+      lastWidth = availableWidth;
+
+      const measure = document.createElement("span");
+      measure.className = "soft-justify-measure";
+      paragraph.replaceChildren(measure);
+
+      const widths = tokenSources.map((source) => {
+        const token = makeToken(source);
+        measure.replaceChildren(token);
+        return token.getBoundingClientRect().width;
+      });
+
+      const space = document.createElement("span");
+      space.textContent = " ";
+      measure.replaceChildren(space);
+      const naturalGap = space.getBoundingClientRect().width;
+      const maxExtraGap = Math.min(3, Number.parseFloat(styles.fontSize) * 0.18);
+      const lines = [];
+      let current = [];
+      let currentWidth = 0;
+
+      widths.forEach((width, index) => {
+        const candidateWidth = currentWidth + (current.length ? naturalGap : 0) + width;
+        if (current.length && candidateWidth > availableWidth) {
+          lines.push({ indexes: current, width: currentWidth });
+          current = [index];
+          currentWidth = width;
+        } else {
+          current.push(index);
+          currentWidth = candidateWidth;
+        }
+      });
+      if (current.length) lines.push({ indexes: current, width: currentWidth });
+
+      const fragment = document.createDocumentFragment();
+      lines.forEach((line, lineIndex) => {
+        const row = document.createElement("span");
+        row.className = "soft-justify-line";
+        const gapCount = Math.max(0, line.indexes.length - 1);
+        const isLastLine = lineIndex === lines.length - 1;
+        const extraGap = !isLastLine && gapCount
+          ? Math.min(maxExtraGap, Math.max(0, availableWidth - line.width) / gapCount)
+          : 0;
+        row.style.setProperty("--soft-line-gap", `${naturalGap + extraGap}px`);
+        line.indexes.forEach((index) => row.append(makeToken(tokenSources[index])));
+        fragment.append(row);
+      });
+
+      paragraph.replaceChildren(fragment);
+      paragraph.classList.add("soft-justified");
+      paragraph.setAttribute("aria-label", accessibleText);
+    };
+
+    const resizeObserver = "ResizeObserver" in window
+      ? new ResizeObserver(render)
+      : null;
+    resizeObserver?.observe(paragraph);
+    render();
+    document.fonts?.ready.then(() => {
+      lastWidth = -1;
+      render();
+    });
+  });
+
   document.querySelectorAll("[data-tab]").forEach((button) => {
     button.addEventListener("click", () => {
       const target = button.dataset.tab;
