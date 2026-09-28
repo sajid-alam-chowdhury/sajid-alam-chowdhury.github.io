@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script>document.documentElement.dataset.theme = localStorage.getItem("sajid-site-theme-v2") || "dark";</script>
+  <script>(() => { const entry = performance.getEntriesByType?.("navigation")[0]; const reload = entry ? entry.type === "reload" : performance.navigation?.type === 1; if (reload) { if ("scrollRestoration" in history) history.scrollRestoration = "manual"; if (location.hash) history.replaceState(null, "", location.pathname + location.search); const reset = () => window.scrollTo(0, 0); reset(); document.addEventListener("DOMContentLoaded", reset, { once: true }); window.addEventListener("pageshow", () => requestAnimationFrame(reset), { once: true }); } })(); document.documentElement.dataset.theme = localStorage.getItem("sajid-site-theme-v2") || "dark";</script>
   <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/jetbrains-mono-latin.woff2" as="font" type="font/woff2" crossorigin>
@@ -16,7 +16,7 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png?v=20260928-current2">
   <title>SemEval 2024 · Md. Sajid Alam Chowdhury</title>
   <meta name="description" content="Paper page for Fired_from_NLP at SemEval-2024 Task 1.">
-  <link rel="stylesheet" href="../assets/site.css?v=20260928-responsive-final6">
+  <link rel="stylesheet" href="../assets/site.css?v=20260928-responsive-final8">
   <script src="../assets/lucide.min.js?v=20260913-polish70" defer></script>
   <script src="../assets/site.js?v=20260928-tagline3" defer></script>
 </head>
@@ -56,7 +56,7 @@
           <p><strong>Status:</strong> Published · DOI: 10.18653/v1/2024.semeval-1.123.</p>
 
           <h2>Abstract</h2>
-          <p class="abstract">Predicting semantic textual relatedness is one of the most challenging tasks in natural language processing. Semantic relatedness prediction has practical applications in search engines and modern text generation systems. SemEval 2024 organized a shared task on semantic textual relatedness, providing an English dataset under Shared Task 1, Track A3. We developed models to predict relatedness between pairs of English sentences by training and evaluating transformer-based architectures, deep learning models, and machine learning methods on the shared dataset. We also used existing semantic textual relatedness datasets such as the STS-B multilingual benchmark, SemEval 2014 Task 1, and SemEval 2015 Task 2. The fine-tuned STS-BERT model performed best, scoring 0.8103 on the test set and placing 25th among participants.</p>
+          <p class="abstract">Predicting semantic textual relatedness (STR) is one of the most challenging tasks in the field of natural language processing. Semantic relatedness prediction has real-life practical applications while developing search engines and modern text generation systems. A shared task on semantic textual relatedness has been organized by SemEval 2024, where the organizer has proposed a dataset on semantic textual relatedness in the English language under Shared Task 1 (Track A3). In this work, we have developed models to predict semantic textual relatedness between pairs of English sentences by training and evaluating various transformer-based model architectures, deep learning, and machine learning methods using the shared dataset. Moreover, we have utilized existing semantic textual relatedness datasets such as the stsb multilingual benchmark dataset, the SemEval 2014 Task 1 dataset, and the SemEval 2015 Task 2 dataset. Our findings show that in the SemEval 2024 Shared Task 1 (Track A3), the fine-tuned-STS-BERT model performed the best, scoring 0.8103 on the test set and placing 25th out of all participants.</p>
 
           <h2>BibTeX</h2>
           <pre id="bibtex">@inproceedings{shanto-etal-2024-fired,

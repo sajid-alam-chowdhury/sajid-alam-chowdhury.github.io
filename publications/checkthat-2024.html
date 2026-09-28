@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script>document.documentElement.dataset.theme = localStorage.getItem("sajid-site-theme-v2") || "dark";</script>
+  <script>(() => { const entry = performance.getEntriesByType?.("navigation")[0]; const reload = entry ? entry.type === "reload" : performance.navigation?.type === 1; if (reload) { if ("scrollRestoration" in history) history.scrollRestoration = "manual"; if (location.hash) history.replaceState(null, "", location.pathname + location.search); const reset = () => window.scrollTo(0, 0); reset(); document.addEventListener("DOMContentLoaded", reset, { once: true }); window.addEventListener("pageshow", () => requestAnimationFrame(reset), { once: true }); } })(); document.documentElement.dataset.theme = localStorage.getItem("sajid-site-theme-v2") || "dark";</script>
   <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/jetbrains-mono-latin.woff2" as="font" type="font/woff2" crossorigin>
@@ -16,7 +16,7 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png?v=20260928-current2">
   <title>CheckThat! 2024 · Md. Sajid Alam Chowdhury</title>
   <meta name="description" content="Paper page for Fired_from_NLP at CheckThat! 2024.">
-  <link rel="stylesheet" href="../assets/site.css?v=20260928-responsive-final6">
+  <link rel="stylesheet" href="../assets/site.css?v=20260928-responsive-final8">
   <script src="../assets/lucide.min.js?v=20260913-polish70" defer></script>
   <script src="../assets/site.js?v=20260928-tagline3" defer></script>
 </head>
@@ -56,7 +56,7 @@
           <p><strong>Status:</strong> Published.</p>
 
           <h2>Abstract</h2>
-          <p class="abstract">Due to the immense use of web-based and social media platforms, people encounter large amounts of information, but not all of it is true. It is therefore important to verify statements before believing them, making check-worthiness a core NLP research topic in both low-resource and resource-rich languages. The CheckThat! Lab at CLEF 2024 organized Task 1 on check-worthiness estimation, providing Arabic, English, and Dutch datasets to determine whether claims in tweets and transcriptions are worth fact-checking. We used several machine learning, deep learning, and transformer-based models to identify the best approach for the task. Our proposed CW-BERT model ranked 7th, 10th, and 12th, with F1 scores of 0.530, 0.543, and 0.745 for Arabic, English, and Dutch respectively.</p>
+          <p class="abstract">Due to immense usage and dependence on web-based and social media platforms, we nowadays come across a lot of information but all of them are not true. Thus, it is important to verify a statement before believing it. Therefore, Checking the validity of a statement has become a core research topic in Natural Language Processing (NLP) in both low-resource and resource-enriched languages. The CheckThat! Lab at CLEF 2024 has organized a shared task named Check-worthiness estimation (Task 1) where three datasets have been provided in the Arabic, English, and Dutch languages to determine whether a claim in a tweet and/or transcriptions is worth fact-checking. To perform the task, we have utilized several machine learning, deep learning, and transformer-based models to check which model performs best on the given datasets. Among all of these models, our proposed CW-BERT model has ranked 7th, 10th, and 12th, scoring the F1 scores of 0.530, 0.543, and 0.745 in this task for the Arabic, English, and Dutch language respectively.</p>
 
           <h2>BibTeX</h2>
           <pre id="bibtex">@inproceedings{chowdhury2024checkthat,

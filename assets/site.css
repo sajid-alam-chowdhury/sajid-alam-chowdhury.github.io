@@ -2689,6 +2689,20 @@ pre {
     overflow-wrap: break-word;
   }
 
+  .paper-main .abstract {
+    font-size: 0.94rem;
+    line-height: 1.68;
+    text-align: justify;
+    text-align-last: left;
+    text-justify: inter-character;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphenate-limit-chars: 8 3 3;
+    -webkit-hyphenate-limit-before: 3;
+    -webkit-hyphenate-limit-after: 3;
+    overflow-wrap: break-word;
+  }
+
   .site-shell,
   .container,
   .wrap {
@@ -2984,6 +2998,26 @@ pre {
 }
 
 @media (max-width: 480px) {
+  .paper-hero h1 {
+    font-size: clamp(1.28rem, 5.2vw, 1.55rem);
+    line-height: 1.2;
+  }
+
+  .paper-main,
+  .paper-side {
+    padding: 0.9rem;
+  }
+
+  .paper-main h2 {
+    font-size: 1.16rem;
+  }
+
+  .paper-main p,
+  .paper-main .abstract {
+    font-size: 0.9rem;
+    line-height: 1.62;
+  }
+
   .hero-copy > h1 {
     font-size: clamp(2.05rem, 9vw, 2.3rem);
     line-height: 1.02;
@@ -3037,6 +3071,16 @@ pre {
   .card-bullets li {
     font-size: 0.9rem;
     line-height: 1.52;
+  }
+
+  .timeline-detail li {
+    color: var(--muted);
+    font-size: 0.9rem;
+    line-height: 1.52;
+    text-align: start;
+    hyphens: none;
+    -webkit-hyphens: none;
+    overflow-wrap: break-word;
   }
 
   .news-entry {

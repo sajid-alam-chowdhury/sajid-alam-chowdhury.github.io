@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script>document.documentElement.dataset.theme = localStorage.getItem("sajid-site-theme-v2") || "dark";</script>
+  <script>(() => { const entry = performance.getEntriesByType?.("navigation")[0]; const reload = entry ? entry.type === "reload" : performance.navigation?.type === 1; if (reload) { if ("scrollRestoration" in history) history.scrollRestoration = "manual"; if (location.hash) history.replaceState(null, "", location.pathname + location.search); const reset = () => window.scrollTo(0, 0); reset(); document.addEventListener("DOMContentLoaded", reset, { once: true }); window.addEventListener("pageshow", () => requestAnimationFrame(reset), { once: true }); } })(); document.documentElement.dataset.theme = localStorage.getItem("sajid-site-theme-v2") || "dark";</script>
   <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/jetbrains-mono-latin.woff2" as="font" type="font/woff2" crossorigin>
@@ -16,7 +16,7 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png?v=20260928-current2">
   <title>AraFinNLP 2024 · Md. Sajid Alam Chowdhury</title>
   <meta name="description" content="Paper page for Fired_from_NLP at AraFinNLP 2024.">
-  <link rel="stylesheet" href="../assets/site.css?v=20260928-responsive-final6">
+  <link rel="stylesheet" href="../assets/site.css?v=20260928-responsive-final8">
   <script src="../assets/lucide.min.js?v=20260913-polish70" defer></script>
   <script src="../assets/site.js?v=20260928-tagline3" defer></script>
 </head>
@@ -56,7 +56,7 @@
           <p><strong>Status:</strong> Published · DOI: 10.18653/v1/2024.arabicnlp-1.36.</p>
 
           <h2>Abstract</h2>
-          <p class="abstract">In the financial industry, identifying user intent from text inputs is crucial for automated trading, sentiment analysis, and customer support. Intent detection is significant for finance, but limited studies have addressed low-resource languages such as Arabic compared with high-resource languages such as English. AraFinNLP 2024 introduced a shared task for detecting banking intents from queries in various Arabic dialects using the ArBanking77 dataset, which contains banking queries across 77 intent classes. We presented Dual-Phase-BERT, a hierarchical approach in which dialect detection is performed first, followed by banking intent detection. We trained and evaluated conventional machine learning, deep learning, and transformer-based models on the shared dataset. Dual-Phase-BERT ranked 7th among competitors with an F1 score of 0.801 on the test set.</p>
+          <p class="abstract">In the financial industry, identifying user intent from text inputs is crucial for various tasks such as automated trading, sentiment analysis, and customer support. One important component of natural language processing (NLP) is intent detection, which is significant to the finance sector. Limited studies have been conducted in the field of finance using languages with limited resources like Arabic, despite notable works being done in high-resource languages like English. To advance Arabic NLP in the financial domain, the organizer of AraFinNLP 2024 has arranged a shared task for detecting banking intents from the queries in various Arabic dialects, introducing a novel dataset named ArBanking77 which includes a collection of banking queries categorized into 77 distinct intents classes. To accomplish this task, we have presented a hierarchical approach called Dual-Phase-BERT in which the detection of dialects is carried out first, followed by the detection of banking intents. Using the provided ArBanking77 dataset, we have trained and evaluated several conventional machine learning, and deep learning models along with some cutting-edge transformer-based models. Among these models, our proposed Dual-Phase-BERT model has ranked 7th out of all competitors, scoring 0.801 on the scale of F1-score on the test set.</p>
 
           <h2>BibTeX</h2>
           <pre id="bibtex">@inproceedings{chowdhury-etal-2024-fired-arafinnlp,
