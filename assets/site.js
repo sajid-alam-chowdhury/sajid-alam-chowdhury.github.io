@@ -334,10 +334,19 @@
     try {
       await navigator.clipboard.writeText(text);
       const original = button.innerHTML;
-      button.innerHTML = '<i data-lucide="check"></i> Copied';
+      const iconOnly = button.classList.contains("bibtex-copy");
+      button.innerHTML = iconOnly ? '<i data-lucide="check"></i>' : '<i data-lucide="check"></i> Copied';
+      if (iconOnly) {
+        button.setAttribute("aria-label", "BibTeX copied");
+        button.title = "Copied";
+      }
       refreshIcons();
       window.setTimeout(() => {
         button.innerHTML = original;
+        if (iconOnly) {
+          button.setAttribute("aria-label", "Copy BibTeX");
+          button.title = "Copy BibTeX";
+        }
         refreshIcons();
       }, 1300);
     } catch {
