@@ -2718,12 +2718,6 @@ pre {
     text-align-last: left;
   }
 
-  .hero-bio .keep-together {
-    display: inline-block;
-    text-align: left;
-    word-spacing: normal;
-  }
-
   .focus-console {
     min-height: 64px;
     padding: 0.62rem 0.78rem;
