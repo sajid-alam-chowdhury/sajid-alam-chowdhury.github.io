@@ -1487,7 +1487,7 @@ h3 {
 .research-card small {
   display: block;
   grid-column: 2;
-  margin-top: 0.22rem;
+  margin-top: 0.1rem;
   color: var(--muted);
   font-size: 0.82rem;
   line-height: 1.35;
@@ -1512,6 +1512,8 @@ h3 {
 }
 
 .research-switcher .research-icon {
+  grid-row: 1 / span 2;
+  align-self: center;
   margin-bottom: 0;
 }
 
@@ -2574,6 +2576,11 @@ pre {
     grid-template-columns: 1fr;
   }
 
+  .research-card {
+    column-gap: 0.72rem;
+    padding: 0.82rem 0.9rem;
+  }
+
   .hero-copy {
     max-width: none;
   }
@@ -2755,6 +2762,40 @@ pre {
   .page-hero p:not(.kicker) {
     font-size: 0.94rem;
     line-height: 1.58;
+  }
+
+  .research-detail p,
+  .paper-main p,
+  .news-entry p:not(.news-kind),
+  .pub-card p,
+  .paper-card p,
+  .timeline-item p,
+  .card p,
+  .achievement-card p,
+  .skill-block p,
+  .check-list li,
+  .card-bullets li,
+  .timeline-detail li,
+  .achievement-list span {
+    font-size: 0.94rem;
+    line-height: 1.55;
+  }
+
+  .research-card h3,
+  .news-entry h3,
+  .pub-card .paper-title,
+  .paper-card .paper-title,
+  .timeline-item h3,
+  .skill-block h3,
+  .achievement-card h3,
+  .beyond-grid .card h3,
+  .contact-line strong {
+    font-size: 0.98rem;
+    line-height: 1.32;
+  }
+
+  .research-detail h3 {
+    font-size: 1.15rem;
   }
 
   #research .section-head > p,
