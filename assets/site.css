@@ -570,14 +570,14 @@ h3 {
 
 @supports ((background-clip: text) or (-webkit-background-clip: text)) {
   .hero-line {
-    background-image: linear-gradient(96deg, #9b6508 0%, #27313f 28%, #27313f 68%, #08766f 100%);
+    background-image: linear-gradient(96deg, #9b6508 0%, #27313f 32%, #27313f 65%, #08766f 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 
   [data-theme="dark"] .hero-line {
-    background-image: linear-gradient(96deg, #f1c668 0%, #f4f7f8 30%, #f4f7f8 67%, #65dfd4 100%);
+    background-image: linear-gradient(96deg, #f1c668 0%, #f4f7f8 33%, #f4f7f8 64%, #65dfd4 100%);
   }
 }
 
