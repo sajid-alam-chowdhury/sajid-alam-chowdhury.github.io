@@ -2855,6 +2855,12 @@ pre {
 }
 
 @media (max-width: 480px) {
+  .hero-bio {
+    hyphenate-limit-chars: 10 4 4;
+    -webkit-hyphenate-limit-before: 4;
+    -webkit-hyphenate-limit-after: 4;
+  }
+
   .hero-bio .keep-together {
     white-space: normal;
   }
