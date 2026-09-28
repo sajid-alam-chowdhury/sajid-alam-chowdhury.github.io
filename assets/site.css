@@ -2641,6 +2641,14 @@ pre {
 }
 
 @media (max-width: 760px) {
+  main h1,
+  main h2,
+  main h3,
+  main p,
+  main li {
+    text-wrap: wrap;
+  }
+
   .news-entry h3,
   .pub-card h3,
   .paper-card h3,
@@ -2675,7 +2683,7 @@ pre {
   .skill-block p {
     text-align: start;
     text-align-last: auto;
-    text-wrap: pretty;
+    text-wrap: wrap;
   }
 
   .site-shell,
@@ -2981,7 +2989,7 @@ pre {
   .news-entry h3 {
     font-size: 0.94rem;
     line-height: 1.32;
-    text-wrap: pretty;
+    text-wrap: wrap;
   }
 
   .news-entry p:not(.news-kind) {
