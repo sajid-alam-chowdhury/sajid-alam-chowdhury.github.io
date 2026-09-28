@@ -628,16 +628,16 @@ h3 {
   max-width: 760px;
   color: var(--muted);
   font-size: 1.02rem;
-  text-align: justify;
+  text-align: left;
   text-align-last: left;
-  text-justify: inter-word;
-  text-wrap: wrap;
+  text-wrap: pretty;
   hyphens: auto;
   -webkit-hyphens: auto;
   hyphenate-limit-chars: 12 5 5;
   -webkit-hyphenate-limit-before: 5;
   -webkit-hyphenate-limit-after: 5;
   -webkit-hyphenate-limit-lines: 2;
+  word-spacing: normal;
   position: relative;
   margin: 1.12rem 0 0;
   isolation: isolate;
@@ -2732,7 +2732,7 @@ pre {
     margin-top: 0;
     padding: 0.9rem 0.86rem;
     font-size: 1rem;
-    text-align: justify;
+    text-align: left;
     text-align-last: left;
   }
 
