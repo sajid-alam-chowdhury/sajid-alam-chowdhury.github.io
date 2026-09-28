@@ -2080,6 +2080,12 @@ h3 {
 .achievement-list span {
   color: var(--ink);
   line-height: 1.36;
+  text-align: left;
+  text-align-last: auto;
+  text-justify: auto;
+  hyphens: none;
+  -webkit-hyphens: none;
+  overflow-wrap: break-word;
 }
 
 .contact-section {
@@ -2658,6 +2664,12 @@ pre {
   }
 }
 
+@media (min-width: 761px) and (max-width: 1120px) {
+  .achievement-grid {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 500px), 1fr));
+  }
+}
+
 @media (max-width: 760px) {
   html {
     scroll-padding-top: 74px;
@@ -2973,15 +2985,6 @@ pre {
     grid-template-columns: 62px minmax(0, 1fr);
     gap: 0.52rem;
     padding: 0.5rem 0.54rem;
-  }
-
-  .achievement-list span {
-    text-align: left;
-    text-align-last: auto;
-    text-justify: auto;
-    hyphens: none;
-    -webkit-hyphens: none;
-    overflow-wrap: break-word;
   }
 
   .achievement-list time {
