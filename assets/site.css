@@ -2559,6 +2559,87 @@ pre {
   }
 }
 
+@media (min-width: 761px) and (max-width: 900px) {
+  .hero {
+    padding: 2.6rem 0 3.4rem;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    row-gap: 0.5rem;
+  }
+
+  .hero-copy {
+    display: contents;
+  }
+
+  .hero-copy > .eyebrow {
+    order: 1;
+    margin-bottom: 0;
+  }
+
+  .hero-copy > h1 {
+    order: 2;
+  }
+
+  .hero-copy > .hero-line {
+    order: 3;
+    margin-top: 0.55rem;
+  }
+
+  .hero-visual {
+    order: 4;
+    width: min(100%, 640px);
+    display: grid;
+    grid-template-columns: 140px minmax(0, 1fr);
+    column-gap: 0.8rem;
+    row-gap: 0.62rem;
+    align-items: stretch;
+    justify-self: center;
+    margin: 1.35rem 0;
+  }
+
+  .portrait-panel {
+    grid-row: 1 / span 2;
+    align-self: stretch;
+    width: 140px;
+    max-width: 140px;
+    height: auto;
+    min-height: 100%;
+    aspect-ratio: auto;
+    margin: 0;
+  }
+
+  .hero-visual .affiliation-grid {
+    margin-top: 0;
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+    align-self: stretch;
+    gap: 0.62rem;
+  }
+
+  .hero-visual .scholar-card {
+    grid-column: 2;
+    margin-top: 0;
+  }
+
+  .hero-copy > .hero-bio {
+    order: 5;
+    margin-top: 0;
+  }
+
+  .hero-copy > .focus-console {
+    order: 6;
+  }
+
+  .hero-copy > .hero-actions {
+    order: 7;
+  }
+
+  .hero-copy > .social-dock {
+    order: 8;
+  }
+}
+
 @media (max-width: 760px) {
   .site-shell,
   .container,
