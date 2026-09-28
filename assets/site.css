@@ -2193,6 +2193,8 @@ h3 {
   border-top: 1px solid var(--line);
   padding: 1.15rem 0;
   color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.5;
 }
 
 .footer .site-shell {
@@ -2689,6 +2691,12 @@ pre {
     overflow-wrap: break-word;
   }
 
+  .section-head > p,
+  .page-hero p:not(.kicker) {
+    font-size: 0.94rem;
+    line-height: 1.58;
+  }
+
   .paper-main .abstract {
     font-size: 0.94rem;
     line-height: 1.68;
@@ -3016,6 +3024,16 @@ pre {
   .paper-main .abstract {
     font-size: 0.9rem;
     line-height: 1.62;
+  }
+
+  .section-head > p,
+  .page-hero p:not(.kicker) {
+    font-size: 0.9rem;
+    line-height: 1.52;
+  }
+
+  .footer {
+    font-size: 0.82rem;
   }
 
   .hero-copy > h1 {
