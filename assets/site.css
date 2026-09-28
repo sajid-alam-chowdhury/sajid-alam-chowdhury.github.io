@@ -668,7 +668,7 @@ h3 {
   width: min(100%, 760px);
   min-height: 60px;
   display: flex;
-  align-items: center;
+  align-items: baseline;
   align-content: center;
   flex-wrap: wrap;
   gap: 0.55rem;
@@ -683,21 +683,16 @@ h3 {
 
 .focus-console > span:first-child {
   color: var(--amber);
-  display: inline-flex;
-  align-items: center;
-  align-self: center;
-  min-height: 1.28rem;
   font-family: "JetBrains Mono", ui-monospace, monospace;
   font-size: 0.76rem;
   font-weight: 800;
-  line-height: 1;
+  line-height: 1.28rem;
   text-transform: uppercase;
   white-space: nowrap;
 }
 
 .focus-console strong {
   color: var(--teal);
-  align-self: center;
   font-family: "Space Grotesk", Inter, ui-sans-serif, sans-serif;
   font-size: 1.06rem;
   font-weight: 600;
@@ -705,6 +700,7 @@ h3 {
 }
 
 .cursor {
+  align-self: center;
   width: 0.58rem;
   height: 1.1rem;
   background: var(--teal);
