@@ -697,18 +697,20 @@ h3 {
 
 .focus-console > span:first-child {
   color: var(--amber);
-  font-family: "JetBrains Mono", ui-monospace, monospace;
-  font-size: 0.74rem;
-  font-weight: 800;
+  font-family: "Space Grotesk", Inter, ui-sans-serif, sans-serif;
+  font-size: 1.06rem;
+  font-weight: 600;
+  line-height: 1.2;
   text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .focus-console strong {
   color: var(--teal);
   font-family: "Space Grotesk", Inter, ui-sans-serif, sans-serif;
-  font-size: 1.08rem;
+  font-size: 1.06rem;
   font-weight: 600;
-  line-height: 1.16;
+  line-height: 1.2;
 }
 
 .cursor {
@@ -2708,6 +2710,10 @@ pre {
   }
 
   .focus-console strong {
+    font-size: 1rem;
+  }
+
+  .focus-console > span:first-child {
     font-size: 1rem;
   }
 
