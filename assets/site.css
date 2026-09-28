@@ -2657,23 +2657,23 @@ pre {
   .achievement-card h3,
   .card h3,
   .skill-block h3 {
-    hyphens: auto;
-    -webkit-hyphens: auto;
+    hyphens: none;
+    -webkit-hyphens: none;
     overflow-wrap: break-word;
   }
 
-  .hero-bio,
-  .section-head > p,
-  .contact-copy > p:not(.section-kicker),
-  .page-hero p:not(.kicker),
-  .research-detail p,
-  .paper-main p {
+  .hero-bio {
     text-justify: inter-character;
     hyphenate-limit-chars: 8 3 3;
     -webkit-hyphenate-limit-before: 3;
     -webkit-hyphenate-limit-after: 3;
   }
 
+  .section-head > p,
+  .contact-copy > p:not(.section-kicker),
+  .page-hero p:not(.kicker),
+  .research-detail p,
+  .paper-main p,
   .news-entry p:not(.news-kind),
   .pub-card p,
   .paper-card p,
@@ -2684,6 +2684,9 @@ pre {
     text-align: start;
     text-align-last: auto;
     text-wrap: wrap;
+    hyphens: none;
+    -webkit-hyphens: none;
+    overflow-wrap: break-word;
   }
 
   .site-shell,
@@ -2996,9 +2999,6 @@ pre {
     margin-top: 0.3rem;
     font-size: 0.9rem;
     line-height: 1.52;
-    hyphenate-limit-chars: 8 3 3;
-    -webkit-hyphenate-limit-before: 3;
-    -webkit-hyphenate-limit-after: 3;
   }
 
   .hero-bio {
