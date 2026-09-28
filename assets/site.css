@@ -2725,8 +2725,7 @@ pre {
 
   .check-list li,
   .card-bullets li,
-  .timeline-detail li,
-  .achievement-list span {
+  .timeline-detail li {
     text-align: justify;
     text-align-last: left;
     text-justify: inter-character;
@@ -2972,8 +2971,17 @@ pre {
 
   .achievement-list p {
     grid-template-columns: 62px minmax(0, 1fr);
-    gap: 0.6rem;
-    padding: 0.56rem 0.58rem;
+    gap: 0.52rem;
+    padding: 0.5rem 0.54rem;
+  }
+
+  .achievement-list span {
+    text-align: left;
+    text-align-last: auto;
+    text-justify: auto;
+    hyphens: none;
+    -webkit-hyphens: none;
+    overflow-wrap: break-word;
   }
 
   .achievement-list time {
@@ -3140,13 +3148,13 @@ pre {
   }
 
   .hero-line {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     line-height: 1.4;
   }
 
   .hero-line > span {
-    display: block;
-    white-space: nowrap;
+    display: inline;
+    white-space: normal;
   }
 
   .hero-bio {
@@ -3374,8 +3382,8 @@ pre {
 
   .achievement-list p {
     grid-template-columns: 56px minmax(0, 1fr);
-    gap: 0.52rem;
-    padding: 0.52rem;
+    gap: 0.46rem;
+    padding: 0.46rem 0.48rem;
   }
 
   .achievement-list time {
@@ -3402,12 +3410,6 @@ pre {
 
 @media (max-width: 420px) {
   .hero-line {
-    font-size: 0.84rem;
-  }
-}
-
-@media (max-width: 365px) {
-  .hero-line > span {
-    white-space: normal;
+    font-size: 0.86rem;
   }
 }
