@@ -2697,6 +2697,18 @@ pre {
     line-height: 1.58;
   }
 
+  #research .section-head > p,
+  #coding .section-head > p {
+    text-align: justify;
+    text-align-last: left;
+    text-justify: inter-character;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphenate-limit-chars: 9 4 4;
+    -webkit-hyphenate-limit-before: 4;
+    -webkit-hyphenate-limit-after: 4;
+  }
+
   .paper-main .abstract {
     font-size: 0.94rem;
     line-height: 1.68;
