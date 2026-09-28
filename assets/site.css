@@ -2984,6 +2984,34 @@ pre {
 }
 
 @media (max-width: 480px) {
+  .hero-copy > h1 {
+    font-size: clamp(2.05rem, 9vw, 2.3rem);
+    line-height: 1.02;
+  }
+
+  .hero-line {
+    font-size: 1.03rem;
+    line-height: 1.4;
+  }
+
+  .hero-bio {
+    font-size: 0.94rem;
+    line-height: 1.62;
+  }
+
+  .focus-console > span:first-child {
+    font-size: 0.7rem;
+  }
+
+  .focus-console strong {
+    font-size: 0.94rem;
+  }
+
+  .contact-copy > p:not(.section-kicker) {
+    font-size: 0.94rem;
+    line-height: 1.58;
+  }
+
   .research-card h3,
   .pub-card .paper-title,
   .paper-card .paper-title,
@@ -3189,7 +3217,7 @@ pre {
 @media (max-width: 380px) {
   .hero-bio {
     padding-inline: 0.8rem;
-    font-size: 0.96rem;
+    font-size: 0.92rem;
   }
 
   .hero-visual {
