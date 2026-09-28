@@ -2595,8 +2595,8 @@ pre {
     column-gap: 0.8rem;
     row-gap: 0.62rem;
     align-items: stretch;
-    justify-self: center;
-    margin: 1.35rem 0;
+    justify-self: start;
+    margin: 1.35rem 0 1.35rem min(60px, max(0px, calc((100% - 640px) / 2)));
   }
 
   .portrait-panel {
