@@ -2641,6 +2641,19 @@ pre {
 }
 
 @media (max-width: 760px) {
+  .news-entry h3,
+  .pub-card h3,
+  .paper-card h3,
+  .timeline-item h3,
+  .research-card h3,
+  .achievement-card h3,
+  .card h3,
+  .skill-block h3 {
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    overflow-wrap: break-word;
+  }
+
   .hero-bio,
   .section-head > p,
   .contact-copy > p:not(.section-kicker),
@@ -2960,6 +2973,26 @@ pre {
 }
 
 @media (max-width: 480px) {
+  .news-entry {
+    gap: 0.72rem;
+    padding: 0.78rem 0.82rem;
+  }
+
+  .news-entry h3 {
+    font-size: 0.94rem;
+    line-height: 1.32;
+    text-wrap: pretty;
+  }
+
+  .news-entry p:not(.news-kind) {
+    margin-top: 0.3rem;
+    font-size: 0.9rem;
+    line-height: 1.52;
+    hyphenate-limit-chars: 8 3 3;
+    -webkit-hyphenate-limit-before: 3;
+    -webkit-hyphenate-limit-after: 3;
+  }
+
   .hero-bio {
     hyphenate-limit-chars: 10 4 4;
     -webkit-hyphenate-limit-before: 4;
